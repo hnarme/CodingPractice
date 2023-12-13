@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.params=length
+comment0.target=Practice(int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Practice\r\n
+comment1.params=length
+comment1.target=java.lang.String\ makeRow(int)
+comment2.params=size
+comment2.target=void\ triangle(int)
+numComments=3

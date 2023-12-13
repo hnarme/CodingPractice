@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Rooms()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Rooms\r\n
+comment1.params=
+comment1.target=java.lang.String\ look()
+comment2.params=
+comment2.target=void\ roomNum()
+numComments=3
