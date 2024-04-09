@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=FlyMove()
+comment0.text=\r\n\ Create\ a\ FlyMove\ object.\ Creates\ a\ fresh\ canvas\ and\ makes\ it\ visible.\r\n
+comment1.params=
+comment1.target=void\ drawDemo()
+comment1.text=\r\n\ This\ method\ demonstrates\ some\ of\ the\ drawing\ operations\ that\ are\r\n\ available\ on\ a\ Canvas\ object.\r\n
+comment2.params=
+comment2.target=void\ bounce()
+comment2.text=\r\n\ Simulates\ two\ bouncing\ balls\r\n
+numComments=3
