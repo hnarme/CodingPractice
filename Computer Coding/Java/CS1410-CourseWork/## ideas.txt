@@ -1,0 +1,43 @@
+Spec for Simulation
+has psvm (Main() method) and no constructor
+uses UserInputInterface implemented by TextUI
+uses PetrolStation
+uses OutputInterface // plan to refactor this into an Interface then class even if it's a bit redundent
+Jdoc
+Simulation sets up and manages the running of a simulation.
+It uses an implementation of UserInputInterface to get/manage the input from the User.
+It will then conststruct and pass the input to the Petrol Station which then actually runs a simulation and returns the results
+It will then forward the results to and OutputInterface that will manage how to represent the output to the user/save the results.
+@see UserInputInterface
+@see Petrol Station
+@see OutputInterface
+
+Spec for Petrol Station
+Uses parameters to set up configuration #components that are (or could be) configurable should be initiated at the start of the constructor. it should set up DataStructors' required then begin a loop of ticks  then returning the results in an array type double(possible idea to seperate output from the constructor : else the constructor would need an appropriate return type)
+Jdoc
+Petrol Station runs a simulation of a petrol station with a configurable number of pumps & tills, and spawn probabilities of vehicles that will go to the pump.
+The simulations runs on ticks of 10seconds per tick, pumps Fill up one gallon per tick, pumps have a limited capacity of 3 Units.
+Narative of the simulation:
+	A Vehicle comes to the petrol station it goes to the least occupied pump.
+	The Vehicle at the font of each pump fills up and then goes then goes to the least occupied till to pay : while still occupying space at the pump.
+	If a Vehicle can't enter a pump it will not spend money at the petrol statation and this accoounts to MoneyLost.
+	Money made by sales (of fuel) at the petrol station to RevenueMade.
+@see Vehicle
+
+##NOTES from Spec
+Note that the probabilities of the purchases, the sizes of the gas tanks and their behaviour are subject
+to change in the future. You should make your classes flexible enough to adapt to this without major
+alterations to the software.
+
+1. Think generically! You should aim to write a small library of classes that can be used to build the
+scenario described above, but that would also support similar scenarios (more types of vehicles,
+smarter queueing) without change to the library classes. This is one of the assessment criteria for
+the design.
+2. When deciding which type of vehicle will arrive, first generate a random number between 0 and 1.
+If it is less than or equal to p, it will be a small car. If it is between p and 2p, it will be a motorbike.
+If it is between 2p and 2p + q, it will be a sedan. Otherwise, no vehicle will arrive. Note: trucks
+would add another range between 2p + q and 2p + q + t.
+
+
+Decisions:
+When designing the program we worked in a priority flow. This meant we first focused on having a working solution, then with any spare time we would work on improving the implementation. Also we first started with a Level 2 design out of concern of time constraints and propposed once we had Level 2 complete we would add the Level 1 functionality after. Doing it this way would mean we would be more likely to have a deliverable solution and would give us experiance on adding new features to the program as this is one of the concepts of the breif. A large focus when designing the code was reducing code duplication for improved maintenence and less redundency and having a strongly encapsulated design meaning that if only when something was needed externally would we create an accessor method and also increase it's visability from private to protected to package-private to pubilic. We also didn't want to recrate anything and tried to use as many standard library classes as we could, for example instead of having a Till class that held Vehicle objects and acted as a queue system we found a Queue implemented by a LinkedList had all the functionality our client code would and used that instead. We also thought Pump could therefor be a library class rather than client code and thought extending the features of LinkedList we could create a queue system with limited capcity as the Pump required. In our Inital UML we had an Abstract Vehicle class but instead changed it to a normal parent class because using Abstract would have lead to code duplication. Abstract is to be used when each child class will have a unique implementation, if at least there is a majority of child classes with an identicly implementation then it should not be abstract and instead the unique implementations can override. This also provided a default implementation for any new Vehicle type to inherit. The reason of not having Motorbike as seperate and Car as a parent class for SmallCar and FamilySedan to inherit from, is because in the only unique trait of the Motorbike in the current submission is not having a uniform range of possible fuel[[[[Having a small panic attack - because what if we miss interpreted the spec, it only says TankSize - not the amount to fill : could the tanksize be the stated : and we have to provide a random amount it needs to fill ??]]]]         --- and an Interface is to be used for communicate between components in our case for the Input and Output we're comminucating with the user to provide input, and possibly with the system if we decide to save to disk
