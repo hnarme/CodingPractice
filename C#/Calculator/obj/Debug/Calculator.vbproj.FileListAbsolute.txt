@@ -1,0 +1,13 @@
+F:\Users\Hannah\Documents\visual basic projects\Calculator\bin\Debug\Calculator.exe.config
+F:\Users\Hannah\Documents\visual basic projects\Calculator\bin\Debug\Calculator.exe
+F:\Users\Hannah\Documents\visual basic projects\Calculator\bin\Debug\Calculator.pdb
+F:\Users\Hannah\Documents\visual basic projects\Calculator\bin\Debug\Calculator.xml
+F:\Users\Hannah\Documents\visual basic projects\Calculator\obj\Debug\Calculator.vbproj.AssemblyReference.cache
+F:\Users\Hannah\Documents\visual basic projects\Calculator\obj\Debug\Calculator.vbproj.SuggestedBindingRedirects.cache
+F:\Users\Hannah\Documents\visual basic projects\Calculator\obj\Debug\Calculator.Resources.resources
+F:\Users\Hannah\Documents\visual basic projects\Calculator\obj\Debug\Calculator.vbproj.GenerateResource.cache
+F:\Users\Hannah\Documents\visual basic projects\Calculator\obj\Debug\Calculator.vbproj.CoreCompileInputs.cache
+F:\Users\Hannah\Documents\visual basic projects\Calculator\obj\Debug\Calculator.exe
+F:\Users\Hannah\Documents\visual basic projects\Calculator\obj\Debug\Calculator.xml
+F:\Users\Hannah\Documents\visual basic projects\Calculator\obj\Debug\Calculator.pdb
+F:\Users\Hannah\Documents\visual basic projects\Calculator\obj\Debug\Calculator.Calculator.resources
