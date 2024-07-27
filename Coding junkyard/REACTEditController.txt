@@ -1,0 +1,30 @@
+namespace UserManagement.Web.Controllers;
+public class EditController : Controller
+{
+    private readonly IUserService _userService;
+
+    public EditController(IUserService userService) => _userService = userService;
+
+    [HttpGet]
+    public ActionResult Edit(int Id)
+    {
+        var items = _userService.GetAll().Select(p => new UserListItemViewModel
+        {
+            Id = p.Id,
+            Forename = p.Forename,
+            Surname = p.Surname,
+            DateOfBirth = p.DateOfBirth,
+            Email = p.Email,
+            IsActive = p.IsActive
+        });
+
+        var model = new UserListViewModel
+        {
+            Items = items.ToList().OrderBy(p => p.Id).ToList()
+        };
+
+        var eduser = items.Where(p => p.Id == Id).FirstOrDefault();
+
+        return View(eduser);
+    }
+}

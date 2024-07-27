@@ -1,0 +1,21 @@
+        string filePath = "../UserManagement.Web/logs/UserManagementlog.txt";
+
+        if(System.IO.File.Exists(filePath))
+        {
+            string fileData = System.IO.File.ReadAllText(filePath);
+        }
+        else
+        {
+            ViewBag.FileContents = "File not found.";
+        }
+
+        if (System.IO.File.Exists(filePath))
+        {
+            string newFileData =
+
+                File.WriteAllText(PATH, STRING);
+            ViewBag.FileContents = fileData;
+        }
+
+        return View();
+    }
