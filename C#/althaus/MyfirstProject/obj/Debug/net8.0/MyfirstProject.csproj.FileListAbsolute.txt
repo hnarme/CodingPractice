@@ -1,0 +1,15 @@
+f:\Users\Hannah\Documents\CodingPractice\c#\althaus\MyfirstProject\bin\Debug\net8.0\MyfirstProject.exe
+f:\Users\Hannah\Documents\CodingPractice\c#\althaus\MyfirstProject\bin\Debug\net8.0\MyfirstProject.deps.json
+f:\Users\Hannah\Documents\CodingPractice\c#\althaus\MyfirstProject\bin\Debug\net8.0\MyfirstProject.runtimeconfig.json
+f:\Users\Hannah\Documents\CodingPractice\c#\althaus\MyfirstProject\bin\Debug\net8.0\MyfirstProject.dll
+f:\Users\Hannah\Documents\CodingPractice\c#\althaus\MyfirstProject\bin\Debug\net8.0\MyfirstProject.pdb
+f:\Users\Hannah\Documents\CodingPractice\c#\althaus\MyfirstProject\obj\Debug\net8.0\MyfirstProject.GeneratedMSBuildEditorConfig.editorconfig
+f:\Users\Hannah\Documents\CodingPractice\c#\althaus\MyfirstProject\obj\Debug\net8.0\MyfirstProject.AssemblyInfoInputs.cache
+f:\Users\Hannah\Documents\CodingPractice\c#\althaus\MyfirstProject\obj\Debug\net8.0\MyfirstProject.AssemblyInfo.cs
+f:\Users\Hannah\Documents\CodingPractice\c#\althaus\MyfirstProject\obj\Debug\net8.0\MyfirstProject.csproj.CoreCompileInputs.cache
+f:\Users\Hannah\Documents\CodingPractice\c#\althaus\MyfirstProject\obj\Debug\net8.0\MyfirstProject.sourcelink.json
+f:\Users\Hannah\Documents\CodingPractice\c#\althaus\MyfirstProject\obj\Debug\net8.0\MyfirstProject.dll
+f:\Users\Hannah\Documents\CodingPractice\c#\althaus\MyfirstProject\obj\Debug\net8.0\refint\MyfirstProject.dll
+f:\Users\Hannah\Documents\CodingPractice\c#\althaus\MyfirstProject\obj\Debug\net8.0\MyfirstProject.pdb
+f:\Users\Hannah\Documents\CodingPractice\c#\althaus\MyfirstProject\obj\Debug\net8.0\MyfirstProject.genruntimeconfig.cache
+f:\Users\Hannah\Documents\CodingPractice\c#\althaus\MyfirstProject\obj\Debug\net8.0\ref\MyfirstProject.dll
