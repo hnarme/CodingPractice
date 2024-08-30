@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "f:\\Users\\Hannah\\Documents\\CodingPractice\\c#\\althaus\\MyfirstProject\\MyfirstProject.csproj": {}
+    "f:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\althaus\\MyfirstProject\\MyfirstProject.csproj": {}
   },
   "projects": {
-    "f:\\Users\\Hannah\\Documents\\CodingPractice\\c#\\althaus\\MyfirstProject\\MyfirstProject.csproj": {
+    "f:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\althaus\\MyfirstProject\\MyfirstProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "f:\\Users\\Hannah\\Documents\\CodingPractice\\c#\\althaus\\MyfirstProject\\MyfirstProject.csproj",
+        "projectUniqueName": "f:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\althaus\\MyfirstProject\\MyfirstProject.csproj",
         "projectName": "MyfirstProject",
-        "projectPath": "f:\\Users\\Hannah\\Documents\\CodingPractice\\c#\\althaus\\MyfirstProject\\MyfirstProject.csproj",
+        "projectPath": "f:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\althaus\\MyfirstProject\\MyfirstProject.csproj",
         "packagesPath": "C:\\Users\\Hannah\\.nuget\\packages\\",
-        "outputPath": "f:\\Users\\Hannah\\Documents\\CodingPractice\\c#\\althaus\\MyfirstProject\\obj\\",
+        "outputPath": "f:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\althaus\\MyfirstProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
