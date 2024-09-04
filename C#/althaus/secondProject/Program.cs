@@ -61,3 +61,14 @@ foreach (string myString in fruits)
 {
     Console.WriteLine(myString);
 }
+
+do
+{
+    Console.WriteLine(fruits);
+}
+while (fruits.Count > 0);
+
+while (fruits.Count > 0)
+{
+    Console.WriteLine(fruits + "while loop");
+}
