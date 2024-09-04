@@ -83,7 +83,7 @@ do
 }
 while(input != "quit"); */
 
-List<string> fruits = new List<string>();
+/* List<string> fruits = new List<string>();
 string fruitEntered;
 do
 {
@@ -98,4 +98,4 @@ do
 foreach (string fruit in fruits)
 {
   Console.WriteLine(fruit);
-}
+} */
