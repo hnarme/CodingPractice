@@ -99,3 +99,54 @@ foreach (string fruit in fruits)
 {
   Console.WriteLine(fruit);
 } */
+
+List<int> userAccountID = new List<int>();
+int choice;
+int accountNum = 0;
+int balanceInPence = 0;
+
+//
+Console.WriteLine("Menu");
+Console.WriteLine("1. Add bank account");
+Console.WriteLine("2. Add money to account");
+Console.WriteLine("3. Subtract money from account");
+console.WriteLine("4. Print all accounts")
+console.WriteLine("Please enter option: ")
+choice = Console.ReadLine();
+
+//
+if(choice == 1)
+{
+    accountNum = accountNum + 1;
+    accounts.Add(accountNum);
+    Console.WriteLine("Add bank account");
+    Console.WriteLine("New bank account created");
+    Console.WriteLine("Account number is " + userAccountID);
+
+    for (int i = 0; i > balanceInPence; i++)
+    {
+        balanceInPence = balanceInPence + 1;
+        console.WriteLine("Account balance is £" + (float)(balanceInPence) / 100.0f);
+    }
+}
+else if(choice == 2)
+{
+    console.WriteLine("How much would you like to add")
+    addMoneyChoice = Console.ReadLine();
+}
+else if(choice == 3)
+{
+    console.WriteLine("Under maintenance choose option 1")
+    choice = Console.ReadLine();
+}
+else if(choice == 4)
+{
+    foreach (int accounts in userAccountID)
+    {
+        Console.WriteLine(accounts);
+    }
+}
+else
+{
+    console.writeLine("Invalid choice! You must only select one of the menu options using numerical values!");
+}
