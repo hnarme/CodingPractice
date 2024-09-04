@@ -39,7 +39,25 @@ Console.WriteLine(fruits[2]);
 fruits.Add("Durian");
 Console.WriteLine(fruits[3]); */
 
-for (int myInt = 0; myInt < 10; myInt++)
+/* for (int myInt = 0; myInt < 10; myInt++)
 {
     Console.WriteLine(myInt);
+} */
+
+/* int[] myInts = new int[10];
+
+foreach (int myInt in myInts)
+{
+    Console.WriteLine(myInts);
+} */
+
+List<string> fruits;
+fruits = new List<string>();
+fruits[0] = "Apple";
+fruits[1] = "Banana";
+fruits[2] = "Cherry";
+
+foreach (string myString in myInts)
+{
+    Console.WriteLine(myInts);
 }
