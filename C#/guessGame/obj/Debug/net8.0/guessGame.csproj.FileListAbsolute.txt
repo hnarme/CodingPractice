@@ -1,0 +1,15 @@
+f:\Users\Hannah\Documents\CodingPractice\C#\guessGame\bin\Debug\net8.0\guessGame.exe
+f:\Users\Hannah\Documents\CodingPractice\C#\guessGame\bin\Debug\net8.0\guessGame.deps.json
+f:\Users\Hannah\Documents\CodingPractice\C#\guessGame\bin\Debug\net8.0\guessGame.runtimeconfig.json
+f:\Users\Hannah\Documents\CodingPractice\C#\guessGame\bin\Debug\net8.0\guessGame.dll
+f:\Users\Hannah\Documents\CodingPractice\C#\guessGame\bin\Debug\net8.0\guessGame.pdb
+f:\Users\Hannah\Documents\CodingPractice\C#\guessGame\obj\Debug\net8.0\guessGame.GeneratedMSBuildEditorConfig.editorconfig
+f:\Users\Hannah\Documents\CodingPractice\C#\guessGame\obj\Debug\net8.0\guessGame.AssemblyInfoInputs.cache
+f:\Users\Hannah\Documents\CodingPractice\C#\guessGame\obj\Debug\net8.0\guessGame.AssemblyInfo.cs
+f:\Users\Hannah\Documents\CodingPractice\C#\guessGame\obj\Debug\net8.0\guessGame.csproj.CoreCompileInputs.cache
+f:\Users\Hannah\Documents\CodingPractice\C#\guessGame\obj\Debug\net8.0\guessGame.sourcelink.json
+f:\Users\Hannah\Documents\CodingPractice\C#\guessGame\obj\Debug\net8.0\guessGame.dll
+f:\Users\Hannah\Documents\CodingPractice\C#\guessGame\obj\Debug\net8.0\refint\guessGame.dll
+f:\Users\Hannah\Documents\CodingPractice\C#\guessGame\obj\Debug\net8.0\guessGame.pdb
+f:\Users\Hannah\Documents\CodingPractice\C#\guessGame\obj\Debug\net8.0\guessGame.genruntimeconfig.cache
+f:\Users\Hannah\Documents\CodingPractice\C#\guessGame\obj\Debug\net8.0\ref\guessGame.dll
