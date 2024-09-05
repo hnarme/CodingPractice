@@ -100,53 +100,66 @@ foreach (string fruit in fruits)
   Console.WriteLine(fruit);
 } */
 
-List<int> userAccountID = new List<int>();
-int choice;
-int accountNum = 0;
-int balanceInPence = 0;
-
-//
-Console.WriteLine("Menu");
-Console.WriteLine("1. Add bank account");
-Console.WriteLine("2. Add money to account");
-Console.WriteLine("3. Subtract money from account");
-console.WriteLine("4. Print all accounts")
-console.WriteLine("Please enter option: ")
-choice = Console.ReadLine();
-
-//
-if(choice == 1)
+List<int> accountBalances = new List<int>();
+string menuOption;
+string userInput;
+do
 {
-    accountNum = accountNum + 1;
-    accounts.Add(accountNum);
-    Console.WriteLine("Add bank account");
-    Console.WriteLine("New bank account created");
-    Console.WriteLine("Account number is " + userAccountID);
+  Console.WriteLine("\nMenu\n" +
+    "1. Add bank account\n" +
+    "2. Add money to account\n" +
+    "3. Subtract money from account\n" +
+    "4. Print all accounts\n" +
+    "5. Quit\n" +
+    "Please enter option:");
+  menuOption = Console.ReadLine();
 
-    for (int i = 0; i > balanceInPence; i++)
+  if (menuOption == "1")
+  {
+    accountBalances.Add(0);
+    Console.WriteLine("Add bank account\n" +
+    "New bank account created. Account number is " + (accountBalances.Count - 1) + ".\n" +
+    "Account balance is £0.00.");
+  }
+  else if (menuOption == "2")
+  {
+    Console.WriteLine("Add money to account");
+    Console.Write("Enter account number:");
+    userInput = Console.ReadLine();
+    int accountNumber = int.Parse(userInput);
+    Console.Write("Enter amount:");
+    userInput = Console.ReadLine();
+    float amountDecimal = float.Parse(userInput);
+    int amount = (int)(amountDecimal * 100f);
+    accountBalances[accountNumber] += amount;
+    Console.WriteLine("Account " + accountNumber + " now has £" + (float)accountBalances[accountNumber] / 100f);
+  }
+  else if (menuOption == "3")
+  {
+    Console.WriteLine("Subtract money from account");
+    Console.Write("Enter account number:");
+    userInput = Console.ReadLine();
+    int accountNumber = int.Parse(userInput);
+    Console.Write("Enter amount:");
+    userInput = Console.ReadLine();
+    float amountDecimal = float.Parse(userInput);
+    int amount = (int)(amountDecimal * 100f);
+    accountBalances[accountNumber] -= amount;
+    Console.WriteLine("Account " + accountNumber + " now has £" + (float)accountBalances[accountNumber] / 100f);
+  }
+  else if (menuOption == "4")
+  {
+    for (int i = 0; i < accountBalances.Count; i++)
     {
-        balanceInPence = balanceInPence + 1;
-        console.WriteLine("Account balance is £" + (float)(balanceInPence) / 100.0f);
+      Console.WriteLine("Account " + i + " has £" + (float)(accountBalances[i]) / 100f);
     }
-}
-else if(choice == 2)
-{
-    console.WriteLine("How much would you like to add")
-    addMoneyChoice = Console.ReadLine();
-}
-else if(choice == 3)
-{
-    console.WriteLine("Under maintenance choose option 1")
-    choice = Console.ReadLine();
-}
-else if(choice == 4)
-{
-    foreach (int accounts in userAccountID)
-    {
-        Console.WriteLine(accounts);
-    }
-}
-else
-{
-    console.writeLine("Invalid choice! You must only select one of the menu options using numerical values!");
-}
+  }
+} while (menuOption != "5");
+
+// Exercises
+// ---------
+// 1. If the user doesn't enter 1, 2, 3, 4 or 5 when entering a menu option, display the text, "Invalid menu option"
+// 2. If the user enters a negative number when adding or subtracting amounts, display an error message instead of adding or subtracting
+// 3. If the user enters an account number that doesn't exist, display an error message
+// 4. Create a second list called "accountNames". When creating a new account, ask the user for their name. When printing the account
+//    balances, also print the user's name.
