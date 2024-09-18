@@ -1,0 +1,15 @@
+f:\Users\Hannah\Documents\CodingPractice\C#\althaus\Critter\bin\Debug\net8.0\Critter.exe
+f:\Users\Hannah\Documents\CodingPractice\C#\althaus\Critter\bin\Debug\net8.0\Critter.deps.json
+f:\Users\Hannah\Documents\CodingPractice\C#\althaus\Critter\bin\Debug\net8.0\Critter.runtimeconfig.json
+f:\Users\Hannah\Documents\CodingPractice\C#\althaus\Critter\bin\Debug\net8.0\Critter.dll
+f:\Users\Hannah\Documents\CodingPractice\C#\althaus\Critter\bin\Debug\net8.0\Critter.pdb
+f:\Users\Hannah\Documents\CodingPractice\C#\althaus\Critter\obj\Debug\net8.0\Critter.GeneratedMSBuildEditorConfig.editorconfig
+f:\Users\Hannah\Documents\CodingPractice\C#\althaus\Critter\obj\Debug\net8.0\Critter.AssemblyInfoInputs.cache
+f:\Users\Hannah\Documents\CodingPractice\C#\althaus\Critter\obj\Debug\net8.0\Critter.AssemblyInfo.cs
+f:\Users\Hannah\Documents\CodingPractice\C#\althaus\Critter\obj\Debug\net8.0\Critter.csproj.CoreCompileInputs.cache
+f:\Users\Hannah\Documents\CodingPractice\C#\althaus\Critter\obj\Debug\net8.0\Critter.sourcelink.json
+f:\Users\Hannah\Documents\CodingPractice\C#\althaus\Critter\obj\Debug\net8.0\Critter.dll
+f:\Users\Hannah\Documents\CodingPractice\C#\althaus\Critter\obj\Debug\net8.0\refint\Critter.dll
+f:\Users\Hannah\Documents\CodingPractice\C#\althaus\Critter\obj\Debug\net8.0\Critter.pdb
+f:\Users\Hannah\Documents\CodingPractice\C#\althaus\Critter\obj\Debug\net8.0\Critter.genruntimeconfig.cache
+f:\Users\Hannah\Documents\CodingPractice\C#\althaus\Critter\obj\Debug\net8.0\ref\Critter.dll

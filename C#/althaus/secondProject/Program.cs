@@ -388,14 +388,14 @@ Console.WriteLine($"The number at index {index} is {myInts[index]}"); */
 //LinearSearch
 int LinearSearch(List<int> numbers, int numberToFind)
 {
-    for (int i = 0; i < numbers.Count; i++)
+  for (int i = 0; i < numbers.Count; i++)
+  {
+    if (numbers[i] == numberToFind)
     {
-        if (numbers[i] == numberToFind)
-        {
-            return i;
-        }
+      return i;
     }
-    return -1;
+  }
+  return -1;
 }
 
 List<int> sortedNumbers = [3, 6, 9, 14, 19, 25, 28, 34, 41, 56, 58, 86, 89, 93, 97];
@@ -640,7 +640,7 @@ int index = LinearSearch(sortedNumbers, 19); // Should return 4 (remember indexe
 //             }
 // 			Console.Write("\n");
 //         }
-		
+
 //         // Method to perform Merge Sort
 //         private static List<int> MergeSort(List<int> unsorted)
 //         {
@@ -797,3 +797,35 @@ int index = LinearSearch(sortedNumbers, 19); // Should return 4 (remember indexe
 //         }
 //     }
 // }
+
+Car car = new Car();
+car.Name = "Bentley Bentayga";
+car.Colour = "Silver";
+car.CurrentSpeed = 50;
+car.getOilLevel();
+
+Car car2 = new Car();
+car.Name = "Mercedes";
+car.Colour = "Black";
+car.getOilLevel();
+car.setOilLevel(300);
+
+Electric electric = new Electric();
+electric.getOilLevel();
+electric.setOilLevel(0);
+
+Petrol petrol = new Petrol();
+
+Diesel diesel = new Diesel();
+
+List<Car> myCars = new List<Car>();
+myCars.Add(car);
+myCars.Add(car2);
+myCars.Add(electric);
+myCars.Add(petrol);
+myCars.Add(diesel);
+
+foreach (Car myCuars in myCars)
+{
+  myCuars.EngineNoise();
+}
