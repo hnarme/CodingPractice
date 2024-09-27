@@ -1,0 +1,110 @@
+const int MAX_CHOICE_NUM = 3;
+const int MAX_LIBRARIAN_CHOICE_NUM = 3;
+const int MAX_CUSTOMER_CHOICE_NUM = 4;
+
+
+LibrarianInterface libInterface = new LibrarianInterface();
+CustomerInterface cusInterface = new CustomerInterface();
+
+Console.WriteLine("Welcome to the library!n/");
+
+void DisplayMenu()
+{
+    Console.WriteLine("Please select the appropriate login.");
+    Console.WriteLine("1. Log in as librarian");
+    Console.WriteLine("2. Log in as customer");
+    int action = GetUserAction();
+    while (action != 1 && action != 2)
+    {
+        switch (action)
+        {
+            case 1: Librarian(); break;
+            case 2: Customer(); break;
+        }
+    }
+
+}
+
+int GetUserAction()
+{
+    int userChoice = -1;
+    do
+    {
+        Console.WriteLine("Enter a number:");
+        try
+        {
+            string userInput = Console.ReadLine();
+            userChoice = int.Parse(userInput);
+        }
+        catch
+        {
+            Console.WriteLine("Invalid number");
+        }
+    } while (userChoice < 1 || userChoice > MAX_CHOICE_NUM);
+    return userChoice;
+}
+
+void Librarian()
+{
+    do
+    {
+        Console.WriteLine("librarian Menu");
+
+        Console.WriteLine("1. Add/remove/update data");
+        Console.WriteLine("2. Display data");
+        Console.WriteLine("3. Exit to Main Menu");
+
+
+
+        int action = GetLibUserAction();
+        switch (action)
+        {
+            case 1: libInterface.modifyData(); break;
+            case 2: libInterface.displayData(); break;
+            case 3: libInterface.ExittoMenu(); break;
+        }
+    } while (libInterface.ExittoMenu());
+}
+
+void Customer()
+{
+    Console.WriteLine("Customer login interface");
+}
+
+int GetLibUserAction()
+{
+    int userChoice = -1;
+    do
+    {
+        Console.WriteLine("Enter a number:");
+        try
+        {
+            string userInput = Console.ReadLine();
+            userChoice = int.Parse(userInput);
+        }
+        catch
+        {
+            Console.WriteLine("Invalid number");
+        }
+    } while (userChoice < 1 || userChoice > MAX_LIBRARIAN_CHOICE_NUM);
+    return userChoice;
+}
+
+int GetCusUserAction()
+{
+    int userChoice = -1;
+    do
+    {
+        Console.WriteLine("Enter a number:");
+        try
+        {
+            string userInput = Console.ReadLine();
+            userChoice = int.Parse(userInput);
+        }
+        catch
+        {
+            Console.WriteLine("Invalid number");
+        }
+    } while (userChoice < 1 || userChoice > MAX_CUSTOMER_CHOICE_NUM);
+    return userChoice;
+}

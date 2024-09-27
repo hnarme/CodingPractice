@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\GuessGame\\guessGame.csproj": {}
+    "f:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\LIBRARYSYSTEM\\LIBRARYSYSTEM.csproj": {}
   },
   "projects": {
-    "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\GuessGame\\guessGame.csproj": {
+    "f:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\LIBRARYSYSTEM\\LIBRARYSYSTEM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\GuessGame\\guessGame.csproj",
-        "projectName": "guessGame",
-        "projectPath": "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\GuessGame\\guessGame.csproj",
+        "projectUniqueName": "f:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\LIBRARYSYSTEM\\LIBRARYSYSTEM.csproj",
+        "projectName": "LIBRARYSYSTEM",
+        "projectPath": "f:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\LIBRARYSYSTEM\\LIBRARYSYSTEM.csproj",
         "packagesPath": "C:\\Users\\Hannah\\.nuget\\packages\\",
-        "outputPath": "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\GuessGame\\obj\\",
+        "outputPath": "f:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\LIBRARYSYSTEM\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

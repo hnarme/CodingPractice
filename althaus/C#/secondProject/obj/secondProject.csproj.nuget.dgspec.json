@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\GuessGame\\guessGame.csproj": {}
+    "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\althaus\\secondProject\\secondProject.csproj": {}
   },
   "projects": {
-    "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\GuessGame\\guessGame.csproj": {
+    "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\althaus\\secondProject\\secondProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\GuessGame\\guessGame.csproj",
-        "projectName": "guessGame",
-        "projectPath": "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\GuessGame\\guessGame.csproj",
+        "projectUniqueName": "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\althaus\\secondProject\\secondProject.csproj",
+        "projectName": "secondProject",
+        "projectPath": "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\althaus\\secondProject\\secondProject.csproj",
         "packagesPath": "C:\\Users\\Hannah\\.nuget\\packages\\",
-        "outputPath": "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\GuessGame\\obj\\",
+        "outputPath": "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\althaus\\secondProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

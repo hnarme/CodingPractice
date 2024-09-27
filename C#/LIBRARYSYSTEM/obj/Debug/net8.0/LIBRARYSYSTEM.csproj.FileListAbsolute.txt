@@ -1,0 +1,15 @@
+f:\Users\Hannah\Documents\CodingPractice\C#\LIBRARYSYSTEM\bin\Debug\net8.0\LIBRARYSYSTEM.exe
+f:\Users\Hannah\Documents\CodingPractice\C#\LIBRARYSYSTEM\bin\Debug\net8.0\LIBRARYSYSTEM.deps.json
+f:\Users\Hannah\Documents\CodingPractice\C#\LIBRARYSYSTEM\bin\Debug\net8.0\LIBRARYSYSTEM.runtimeconfig.json
+f:\Users\Hannah\Documents\CodingPractice\C#\LIBRARYSYSTEM\bin\Debug\net8.0\LIBRARYSYSTEM.dll
+f:\Users\Hannah\Documents\CodingPractice\C#\LIBRARYSYSTEM\bin\Debug\net8.0\LIBRARYSYSTEM.pdb
+f:\Users\Hannah\Documents\CodingPractice\C#\LIBRARYSYSTEM\obj\Debug\net8.0\LIBRARYSYSTEM.GeneratedMSBuildEditorConfig.editorconfig
+f:\Users\Hannah\Documents\CodingPractice\C#\LIBRARYSYSTEM\obj\Debug\net8.0\LIBRARYSYSTEM.AssemblyInfoInputs.cache
+f:\Users\Hannah\Documents\CodingPractice\C#\LIBRARYSYSTEM\obj\Debug\net8.0\LIBRARYSYSTEM.AssemblyInfo.cs
+f:\Users\Hannah\Documents\CodingPractice\C#\LIBRARYSYSTEM\obj\Debug\net8.0\LIBRARYSYSTEM.csproj.CoreCompileInputs.cache
+f:\Users\Hannah\Documents\CodingPractice\C#\LIBRARYSYSTEM\obj\Debug\net8.0\LIBRARYSYSTEM.sourcelink.json
+f:\Users\Hannah\Documents\CodingPractice\C#\LIBRARYSYSTEM\obj\Debug\net8.0\LIBRARYSYSTEM.dll
+f:\Users\Hannah\Documents\CodingPractice\C#\LIBRARYSYSTEM\obj\Debug\net8.0\refint\LIBRARYSYSTEM.dll
+f:\Users\Hannah\Documents\CodingPractice\C#\LIBRARYSYSTEM\obj\Debug\net8.0\LIBRARYSYSTEM.pdb
+f:\Users\Hannah\Documents\CodingPractice\C#\LIBRARYSYSTEM\obj\Debug\net8.0\LIBRARYSYSTEM.genruntimeconfig.cache
+f:\Users\Hannah\Documents\CodingPractice\C#\LIBRARYSYSTEM\obj\Debug\net8.0\ref\LIBRARYSYSTEM.dll

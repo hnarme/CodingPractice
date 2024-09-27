@@ -1,0 +1,15 @@
+f:\Users\Hannah\Documents\CodingPractice\C#\mini-project\bin\Debug\net8.0\mini-project.exe
+f:\Users\Hannah\Documents\CodingPractice\C#\mini-project\bin\Debug\net8.0\mini-project.deps.json
+f:\Users\Hannah\Documents\CodingPractice\C#\mini-project\bin\Debug\net8.0\mini-project.runtimeconfig.json
+f:\Users\Hannah\Documents\CodingPractice\C#\mini-project\bin\Debug\net8.0\mini-project.dll
+f:\Users\Hannah\Documents\CodingPractice\C#\mini-project\bin\Debug\net8.0\mini-project.pdb
+f:\Users\Hannah\Documents\CodingPractice\C#\mini-project\obj\Debug\net8.0\mini-project.GeneratedMSBuildEditorConfig.editorconfig
+f:\Users\Hannah\Documents\CodingPractice\C#\mini-project\obj\Debug\net8.0\mini-project.AssemblyInfoInputs.cache
+f:\Users\Hannah\Documents\CodingPractice\C#\mini-project\obj\Debug\net8.0\mini-project.AssemblyInfo.cs
+f:\Users\Hannah\Documents\CodingPractice\C#\mini-project\obj\Debug\net8.0\mini-project.csproj.CoreCompileInputs.cache
+f:\Users\Hannah\Documents\CodingPractice\C#\mini-project\obj\Debug\net8.0\mini-project.sourcelink.json
+f:\Users\Hannah\Documents\CodingPractice\C#\mini-project\obj\Debug\net8.0\mini-project.dll
+f:\Users\Hannah\Documents\CodingPractice\C#\mini-project\obj\Debug\net8.0\refint\mini-project.dll
+f:\Users\Hannah\Documents\CodingPractice\C#\mini-project\obj\Debug\net8.0\mini-project.pdb
+f:\Users\Hannah\Documents\CodingPractice\C#\mini-project\obj\Debug\net8.0\mini-project.genruntimeconfig.cache
+f:\Users\Hannah\Documents\CodingPractice\C#\mini-project\obj\Debug\net8.0\ref\mini-project.dll
