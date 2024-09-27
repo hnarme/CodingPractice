@@ -1,0 +1,92 @@
+body {
+    background-color: rgb(205, 245, 150);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to forestgreen on hover */
+nav li a:hover {
+    background-color: forestgreen;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.intro {
+    text-align: center;
+    padding: 20px;
+}
+
+.main {
+    text-align: center;
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+}
+
+.column {
+    float: left;
+}
+
+/* Left and right column */
+.column.side {
+    width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+    width: 50%;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+    .column.side,
+    .column.middle {
+        width: 100%;
+    }
+}
+
+.frog.buttons {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Change the button to forestgreen on hover */
+.frog.buttons:hover {
+    border-color: forestgreen;
+}
+
+.footer {
+    padding: 10px;
+}
