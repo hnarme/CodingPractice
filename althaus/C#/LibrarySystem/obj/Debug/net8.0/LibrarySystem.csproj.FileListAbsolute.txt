@@ -1,0 +1,14 @@
+c:\Users\dave\Projects\C#\Althaus\LibrarySystem\bin\Debug\net8.0\LibrarySystem.exe
+c:\Users\dave\Projects\C#\Althaus\LibrarySystem\bin\Debug\net8.0\LibrarySystem.deps.json
+c:\Users\dave\Projects\C#\Althaus\LibrarySystem\bin\Debug\net8.0\LibrarySystem.runtimeconfig.json
+c:\Users\dave\Projects\C#\Althaus\LibrarySystem\bin\Debug\net8.0\LibrarySystem.dll
+c:\Users\dave\Projects\C#\Althaus\LibrarySystem\bin\Debug\net8.0\LibrarySystem.pdb
+c:\Users\dave\Projects\C#\Althaus\LibrarySystem\obj\Debug\net8.0\LibrarySystem.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\dave\Projects\C#\Althaus\LibrarySystem\obj\Debug\net8.0\LibrarySystem.AssemblyInfoInputs.cache
+c:\Users\dave\Projects\C#\Althaus\LibrarySystem\obj\Debug\net8.0\LibrarySystem.AssemblyInfo.cs
+c:\Users\dave\Projects\C#\Althaus\LibrarySystem\obj\Debug\net8.0\LibrarySystem.csproj.CoreCompileInputs.cache
+c:\Users\dave\Projects\C#\Althaus\LibrarySystem\obj\Debug\net8.0\LibrarySystem.dll
+c:\Users\dave\Projects\C#\Althaus\LibrarySystem\obj\Debug\net8.0\refint\LibrarySystem.dll
+c:\Users\dave\Projects\C#\Althaus\LibrarySystem\obj\Debug\net8.0\LibrarySystem.pdb
+c:\Users\dave\Projects\C#\Althaus\LibrarySystem\obj\Debug\net8.0\LibrarySystem.genruntimeconfig.cache
+c:\Users\dave\Projects\C#\Althaus\LibrarySystem\obj\Debug\net8.0\ref\LibrarySystem.dll
