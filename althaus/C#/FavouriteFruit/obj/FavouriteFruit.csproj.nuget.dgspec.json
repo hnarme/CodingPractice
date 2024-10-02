@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\LIBRARYSYSTEM\\LIBRARYSYSTEM.csproj": {}
+    "F:\\Users\\Hannah\\Documents\\CodingPractice\\althaus\\C#\\FavouriteFruit\\FavouriteFruit.csproj": {}
   },
   "projects": {
-    "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\LIBRARYSYSTEM\\LIBRARYSYSTEM.csproj": {
+    "F:\\Users\\Hannah\\Documents\\CodingPractice\\althaus\\C#\\FavouriteFruit\\FavouriteFruit.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\LIBRARYSYSTEM\\LIBRARYSYSTEM.csproj",
-        "projectName": "LIBRARYSYSTEM",
-        "projectPath": "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\LIBRARYSYSTEM\\LIBRARYSYSTEM.csproj",
+        "projectUniqueName": "F:\\Users\\Hannah\\Documents\\CodingPractice\\althaus\\C#\\FavouriteFruit\\FavouriteFruit.csproj",
+        "projectName": "FavouriteFruit",
+        "projectPath": "F:\\Users\\Hannah\\Documents\\CodingPractice\\althaus\\C#\\FavouriteFruit\\FavouriteFruit.csproj",
         "packagesPath": "C:\\Users\\Hannah\\.nuget\\packages\\",
-        "outputPath": "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\LIBRARYSYSTEM\\obj\\",
+        "outputPath": "F:\\Users\\Hannah\\Documents\\CodingPractice\\althaus\\C#\\FavouriteFruit\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

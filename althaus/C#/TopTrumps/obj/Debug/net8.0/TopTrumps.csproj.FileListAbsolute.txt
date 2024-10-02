@@ -1,0 +1,15 @@
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\TopTrumps\bin\Debug\net8.0\TopTrumps.exe
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\TopTrumps\bin\Debug\net8.0\TopTrumps.deps.json
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\TopTrumps\bin\Debug\net8.0\TopTrumps.runtimeconfig.json
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\TopTrumps\bin\Debug\net8.0\TopTrumps.dll
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\TopTrumps\bin\Debug\net8.0\TopTrumps.pdb
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\TopTrumps\obj\Debug\net8.0\TopTrumps.GeneratedMSBuildEditorConfig.editorconfig
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\TopTrumps\obj\Debug\net8.0\TopTrumps.AssemblyInfoInputs.cache
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\TopTrumps\obj\Debug\net8.0\TopTrumps.AssemblyInfo.cs
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\TopTrumps\obj\Debug\net8.0\TopTrumps.csproj.CoreCompileInputs.cache
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\TopTrumps\obj\Debug\net8.0\TopTrumps.sourcelink.json
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\TopTrumps\obj\Debug\net8.0\TopTrumps.dll
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\TopTrumps\obj\Debug\net8.0\refint\TopTrumps.dll
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\TopTrumps\obj\Debug\net8.0\TopTrumps.pdb
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\TopTrumps\obj\Debug\net8.0\TopTrumps.genruntimeconfig.cache
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\TopTrumps\obj\Debug\net8.0\ref\TopTrumps.dll
