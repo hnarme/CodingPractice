@@ -6,21 +6,32 @@
     <h1 class="display-4">Books</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
     <img src="https://m.media-amazon.com/images/I/71+elQaqLnL._AC_UF894,1000_QL80_.jpg">
-
 </div>
+
 <ul>
-    @for (int i = 1; i <= 100; i++)
+    @for (int a = 1; a <= 100; a++)
     {
-        <li>Item @i</li>
+        <li>For loop @a</li>
     }
 </ul>
-
-
-@{
-    int i = 0;
-    while (i < 5)
-    {
-        i += 1;
-        <p>Item @i</p>
+<ul>
+    @{
+        int b = 1;
     }
-}
+    @while (b <= 100)
+    {
+        <li>While loop @b</li>
+        b = b + 1;
+    }
+</ul>
+<table>
+    @for (int i = 0; i < 30; i++)
+    {
+        <tr>
+            @for (int j = 0; j < 30; j++)
+            {
+                <td>@i,@j</td>
+            }
+        </tr>
+    }
+</table>
