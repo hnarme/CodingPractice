@@ -15,26 +15,17 @@ public class BookController : Controller
 
     public IActionResult Index()
     {
-        Book book;
-        book = new Book();
-        book.Id = 123;
-        book.Name = "Life";
-        book.Author = "Hannah Narme";
+        return View();
+    }
 
-        Customer customer;
-        customer = new Customer();
-        customer.Id = 78;
-        customer.Name = "John Doe";
-        customer.Postcode = "B45 8TD";
-        customer.PhoneNumber = 07389214365;
+    public IActionResult CreateBook()
+    {
+        return View();
+    }
 
-        Sale sale;
-        sale = new Sale();
-        sale.BookId = book.Id;
-        sale.CustomerId = 223;
-        sale.SaleDate = new DateOnly(02, 06, 24);
-
-        return View(book);
+    public IActionResult CreateBookResult(Book book)
+    {
+        return View();
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
