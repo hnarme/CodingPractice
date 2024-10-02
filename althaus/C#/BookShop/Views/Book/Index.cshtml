@@ -6,4 +6,21 @@
     <h1 class="display-4">Books</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
     <img src="https://m.media-amazon.com/images/I/71+elQaqLnL._AC_UF894,1000_QL80_.jpg">
+
 </div>
+<ul>
+    @for (int i = 1; i <= 100; i++)
+    {
+        <li>Item @i</li>
+    }
+</ul>
+
+
+@{
+    int i = 0;
+    while (i < 5)
+    {
+        i += 1;
+        <p>Item @i</p>
+    }
+}
