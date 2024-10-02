@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hnarm\\Documents\\CodingPractice\\C#\\ReadWriteCSV\\app\\app.csproj": {}
+    "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\ReadWriteCSV\\app\\app.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hnarm\\Documents\\CodingPractice\\C#\\ReadWriteCSV\\app\\app.csproj": {
+    "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\ReadWriteCSV\\app\\app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hnarm\\Documents\\CodingPractice\\C#\\ReadWriteCSV\\app\\app.csproj",
+        "projectUniqueName": "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\ReadWriteCSV\\app\\app.csproj",
         "projectName": "app",
-        "projectPath": "C:\\Users\\hnarm\\Documents\\CodingPractice\\C#\\ReadWriteCSV\\app\\app.csproj",
-        "packagesPath": "C:\\Users\\hnarm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hnarm\\Documents\\CodingPractice\\C#\\ReadWriteCSV\\app\\obj\\",
+        "projectPath": "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\ReadWriteCSV\\app\\app.csproj",
+        "packagesPath": "C:\\Users\\Hannah\\.nuget\\packages\\",
+        "outputPath": "F:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\ReadWriteCSV\\app\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\hnarm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hannah\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

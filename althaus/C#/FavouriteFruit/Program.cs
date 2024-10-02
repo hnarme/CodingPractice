@@ -5,5 +5,7 @@
 //Console.WriteLine("Please type your favourite fruit!");
 //person.FavouriteFruit = Console.ReadLine();
 
-Console.Write(person.DisplayGreeting());
+person.Name = "Hannah";
+person.FavouriteFruit = "Melon";
 
+Console.Write(person.DisplayGreeting(person.Name, person.FavouriteFruit));

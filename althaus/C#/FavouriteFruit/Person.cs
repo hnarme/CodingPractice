@@ -6,11 +6,12 @@ class Person
     public string Name;
     public string FavouriteFruit;
 
-    public void DisplayGreeting(string Name, string FavouriteFruit)
+    public void DisplayGreeting(Person person)
     {
-        Name = Name;
-        FavouriteFruit = FavouriteFruit;
+        Name = person.Name;
 
-        Console.WriteLine($"Hello {Name}. Your favourite fruit is {FavouriteFruit}");
+        FavouriteFruit = person.FavouriteFruit;
+
+        Console.WriteLine($"Hello {person.Name}. Your favourite fruit is {person.FavouriteFruit}");
     }
 }
