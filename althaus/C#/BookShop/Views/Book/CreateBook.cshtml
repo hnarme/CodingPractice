@@ -7,15 +7,16 @@
 <form asp-action="CreateBookResult">
     <div class="form-group">
         <label for="Id">Id</label>
-        <input name="Id" />
+        <input type="text" class="form-control" placeholder="Enter ID" name="Id" />
 
         <label for="Name">Name</label>
-        <input name="Name" />
+        <input type="text" class="form-control" placeholder="Enter Name" name="Name" />
 
         <label for="Author">Author</label>
-        <input name="Author" />
+        <input type="text" class="form-control" placeholder="Enter Author's Name" name="Author" />
     </div>
+    <br>
     <div class="form-group">
-        <input type="submit" value="CreateBook" />
+        <input type="submit" class="btn btn-dark" value="CreateBook" />
     </div>
 </form>
