@@ -1,8 +1,9 @@
-using Microsoft.AspNetCore.Identity;
-
+using System.Security.Cryptography.X509Certificates;
 namespace BookShop.Models;
 
-public class Book(String Id, String Name, String Author)
+public class Book()
 {
-
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string Author { get; set; }
 }
