@@ -25,7 +25,7 @@ public class BookController : Controller
 
     public IActionResult CreateBookResult(Book book)
     {
-        return View();
+        return View(book);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
