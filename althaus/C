@@ -1,5 +1,12 @@
 -- @block
-SELECT *
-FROM room,
-    user
-WHERE Room.owner_id = User.id;
+CREATE TABLE Book(
+    Book_id INT PRIMARY KEY AUTO_INCREMENT,
+    Title VARCHAR(255) NOT NULL,
+    Author TEXT,
+    Published_Year DATE,
+    Genre VARCHAR(50),
+    Quantity INT
+);
+-- @block
+INSERT INTO book
+VALUES ()
