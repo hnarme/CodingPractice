@@ -1,0 +1,5 @@
+-- @block
+SELECT *
+FROM room,
+    user
+WHERE Room.owner_id = User.id;
