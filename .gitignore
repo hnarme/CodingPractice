@@ -169,3 +169,8 @@ $RECYCLE.BIN/
 #Temporary Files
 ~*
 temp_*
+althaus/C#/BookShop/obj/BookShop.csproj.nuget.dgspec.json
+althaus/C#/BookShop/obj/project.nuget.cache
+althaus/C#/BookShop/obj/Debug/net8.0/BookShop.AssemblyInfo.cs
+althaus/C#/BookShop/obj/Debug/net8.0/BookShop.AssemblyInfoInputs.cache
+althaus/C#/BookShop/obj/Debug/net8.0/BookShop.GeneratedMSBuildEditorConfig.editorconfig
