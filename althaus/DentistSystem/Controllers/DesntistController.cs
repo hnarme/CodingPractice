@@ -4,11 +4,11 @@ using DentistSystem.Models;
 
 namespace DentistSystem.Controllers;
 
-public class HomeController : Controller
+public class DesntistController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly ILogger<DesntistController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public DesntistController(ILogger<DesntistController> logger)
     {
         _logger = logger;
     }
@@ -18,7 +18,12 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult ViewAppointment()
+    {
+        return View();
+    }
+
+    public IActionResult ViewPatient()
     {
         return View();
     }
