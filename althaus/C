@@ -1,12 +1,13 @@
+-- Commands for airbnb
 -- @block
-CREATE TABLE User(
+CREATE TABLE airbnb.User(
     id INT PRIMARY KEY AUTO_INCREMENT,
     email VARCHAR(255) NOT NULL UNIQUE,
     bio TEXT,
     country VARCHAR(2)
 );
 -- @block
-INSERT INTO User(email, bio, country)
+INSERT INTO airbnb.User(email, bio, country)
 VALUES(
         'hello@world.com',
         'i love strangers',
@@ -14,26 +15,26 @@ VALUES(
     );
 -- @block
 SELECT *
-FROM User;
+FROM airbnb.user;
 -- @block
 SELECT email,
     id
-FROM User;
+FROM airbnb.User;
 -- @block
 SELECT email,
     id
-FROM User
+FROM airbnb.User
 LIMIT 2;
 -- @block
 SELECT email,
     id
-FROM User
+FROM airbnb.User
 ORDER BY id ASC
 LIMIT 2;
 -- @block
 SELECT email,
     id
-FROM User
+FROM airbnb.User
 WHERE country = 'US'
     AND id > 1
 ORDER BY id DESC
@@ -41,23 +42,23 @@ LIMIT 2;
 -- @block
 SELECT email,
     id
-FROM User
+FROM airbnb.User
 WHERE country = 'US'
     AND email LIKE 'h%'
 ORDER BY id DESC
 LIMIT 2;
 -- @block
-CREATE INDEX email_index ON Users(email);
+CREATE INDEX email_index ON airbnb.Users(email);
 -- @block
-CREATE TABLE Room(
+CREATE TABLE airbnb.Room(
     id INT AUTO_INCREMENT,
     street VARCHAR(255),
     owner_id INT NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (owner_id) REFERENCES Users(id)
+    FOREIGN KEY (owner_id) REFERENCES airbnb.Users(id)
 );
 -- @block
-INSERT INTO Room(owner_id, street)
+INSERT INTO airbnb.Room(owner_id, street)
 VALUES (1, 'san diego sailboat'),
     (1, 'nan tucket cottage'),
     (1, 'vail cabin'),
@@ -65,15 +66,15 @@ VALUES (1, 'san diego sailboat'),
 -- @block
 SELECT *
 FROM user
-    INNER JOIN Rooms ON Rooms.owner_id = Users.id;
+    INNER JOIN airbnb.Rooms ON airbnb.Rooms.owner_id = airbnb.Users.id;
 -- @block
-CREATE TABLE Customer(
+CREATE TABLE airbnb.Customer(
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
     dateOfBirth TIMESTAMP NOT NULL
 );
 -- @block
-CREATE TABLE Booking(
+CREATE TABLE airbnb.Booking(
     id INT AUTO_INCREMENT,
     guest_id INT NOT NULL,
     room_id INT NOT NULL,
@@ -86,6 +87,31 @@ CREATE TABLE Booking(
 SELECT guest_id,
     street,
     check_in
-FROM booking
+FROM airbnb.booking
     INNER JOIN room ON room.owner_id = guest_id
 WHERE guest_id = 1;
+--
+--
+-- Commands for library database
+-- @block
+CREATE TABLE library.book(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+);
+--
+-- @block
+INSERT INTO library.book (name, author)
+VALUES ('temp', 'temp');
+--
+-- @block
+SELECT *
+FROM library.book;
+--
+-- @block
+UPDATE library.book
+SET name = 'why do we sleep'
+WHERE name = 'how to sleep';
+-- @block
+DELETE FROM library.book
+WHERE author = 'Dr John';
