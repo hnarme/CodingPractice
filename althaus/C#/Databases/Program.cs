@@ -54,7 +54,7 @@ void Menu()
             case 2: DisplayLibrary(); break;
             case 3: UpdateBook(); break;
             case 4: DeleteBook(); break;
-            case 5: return;
+            case 5: Console.WriteLine("Goodbye!"); return;
         }
     }
     while (true);
@@ -112,10 +112,4 @@ void DeleteBook()
     SqlCommand($"DELETE FROM book WHERE name = '{bookName}';");
     Console.WriteLine($"You have successfully deleted the book");
 
-}
-
-void Exit()
-{
-    Console.WriteLine("Goodbye!");
-    System.Environment.Exit(0);
 }
