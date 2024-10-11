@@ -1,0 +1,15 @@
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\WarmUp\bin\Debug\net8.0\WarmUp.exe
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\WarmUp\bin\Debug\net8.0\WarmUp.deps.json
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\WarmUp\bin\Debug\net8.0\WarmUp.runtimeconfig.json
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\WarmUp\bin\Debug\net8.0\WarmUp.dll
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\WarmUp\bin\Debug\net8.0\WarmUp.pdb
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\WarmUp\obj\Debug\net8.0\WarmUp.GeneratedMSBuildEditorConfig.editorconfig
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\WarmUp\obj\Debug\net8.0\WarmUp.AssemblyInfoInputs.cache
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\WarmUp\obj\Debug\net8.0\WarmUp.AssemblyInfo.cs
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\WarmUp\obj\Debug\net8.0\WarmUp.csproj.CoreCompileInputs.cache
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\WarmUp\obj\Debug\net8.0\WarmUp.sourcelink.json
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\WarmUp\obj\Debug\net8.0\WarmUp.dll
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\WarmUp\obj\Debug\net8.0\refint\WarmUp.dll
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\WarmUp\obj\Debug\net8.0\WarmUp.pdb
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\WarmUp\obj\Debug\net8.0\WarmUp.genruntimeconfig.cache
+f:\Users\Hannah\Documents\CodingPractice\althaus\C#\WarmUp\obj\Debug\net8.0\ref\WarmUp.dll
