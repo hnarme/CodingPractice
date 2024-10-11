@@ -16,8 +16,6 @@ try
     conn.Open();
 
     Menu();
-
-    //MySqlCommand("SELECT * FROM book;");
 }
 catch (MySql.Data.MySqlClient.MySqlException ex)
 {
@@ -41,17 +39,23 @@ void Menu()
 {
     do
     {
+        Console.WriteLine("Welcome to this library");
+        Console.WriteLine("Pick an option:");
+        Console.WriteLine("Option 1: Create a new book");
+        Console.WriteLine("Option 2: Display all books");
+        Console.WriteLine("Option 3: Rename a books name");
+        Console.WriteLine("Option 4: Delete a book");
+        Console.WriteLine("Option 5: Exit");
         int action = GetUserAction();
+
         switch (action)
         {
-            case 0: CreateBook(); break;
-            case 1: DisplayLibrary(); break;
-            case 2: UpdateBook(); break;
-            case 3: DeleteBook(); break;
-            case 4: Exit(); break;
-
+            case 1: CreateBook(); break;
+            case 2: DisplayLibrary(); break;
+            case 3: UpdateBook(); break;
+            case 4: DeleteBook(); break;
+            case 5: return;
         }
-
     }
     while (true);
 
@@ -106,9 +110,12 @@ void DeleteBook()
     Console.WriteLine("To delete a book please type in the name of the book.");
     string bookName = Console.ReadLine();
     SqlCommand($"DELETE FROM book WHERE name = '{bookName}';");
+    Console.WriteLine($"You have successfully deleted the book");
+
 }
 
 void Exit()
 {
+    Console.WriteLine("Goodbye!");
     System.Environment.Exit(0);
 }

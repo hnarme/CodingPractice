@@ -115,3 +115,10 @@ WHERE name = 'how to sleep';
 -- @block
 DELETE FROM library.book
 WHERE author = 'Dr John';
+
+-- @block
+CREATE TABLE library.person(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    dateOfBirth DATE NOT NULL
+);
