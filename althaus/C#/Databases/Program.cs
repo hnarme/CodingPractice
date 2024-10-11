@@ -1,8 +1,10 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System.ComponentModel.Design;
+using MySql.Data.MySqlClient;
 using Mysqlx.Crud;
 
 MySql.Data.MySqlClient.MySqlConnection conn;
 string myConnectionString;
+const int MAX_CHOICE_NUM = 5;
 
 myConnectionString = "server=127.0.0.1;uid=root;" +
     "pwd=root;database=library";
@@ -13,10 +15,7 @@ try
     Console.WriteLine("Connecting to MySQL...");
     conn.Open();
 
-    CreateBook();
-    DisplayLibrary();
-    UpdateBook();
-    DeleteBook();
+    Menu();
 
     //MySqlCommand("SELECT * FROM book;");
 }
@@ -38,6 +37,44 @@ void SqlCommand(string sql)
     rdr.Close();
 }
 
+void Menu()
+{
+    do
+    {
+        int action = GetUserAction();
+        switch (action)
+        {
+            case 0: CreateBook(); break;
+            case 1: DisplayLibrary(); break;
+            case 2: UpdateBook(); break;
+            case 3: DeleteBook(); break;
+            case 4: Exit(); break;
+
+        }
+
+    }
+    while (true);
+
+}
+
+int GetUserAction()
+{
+    int userChoice = -1;
+    do
+    {
+        Console.WriteLine("Enter a number:");
+        try
+        {
+            string userInput = Console.ReadLine();
+            userChoice = int.Parse(userInput);
+        }
+        catch
+        {
+            Console.WriteLine("Invalid number");
+        }
+    } while (userChoice < 1 || userChoice > MAX_CHOICE_NUM);
+    return userChoice;
+}
 
 void CreateBook()
 {
@@ -69,4 +106,9 @@ void DeleteBook()
     Console.WriteLine("To delete a book please type in the name of the book.");
     string bookName = Console.ReadLine();
     SqlCommand($"DELETE FROM book WHERE name = '{bookName}';");
+}
+
+void Exit()
+{
+    System.Environment.Exit(0);
 }
