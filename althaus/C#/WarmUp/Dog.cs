@@ -1,6 +1,6 @@
 class Dog
 {
-    public void MakeNoise()
+    public virtual void MakeNoise()
     {
         Console.WriteLine("Woof");
     }

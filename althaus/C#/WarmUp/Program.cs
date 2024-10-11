@@ -1,3 +1,9 @@
-﻿Dog dog = new Dog();
+﻿Dog[] dog = new Dog[2];
 
-dog.MakeNoise();
+dog[0] = new Dog();
+dog[1] = new Dog();
+
+foreach (Dog dogs in dog)
+{
+    dogs.MakeNoise();
+}
