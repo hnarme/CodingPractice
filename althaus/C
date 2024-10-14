@@ -92,33 +92,77 @@ FROM airbnb.booking
 WHERE guest_id = 1;
 --
 --
--- Commands for library database
+--
+--
+--
+-- COMMANDS for library database
 -- @block
 CREATE TABLE library.book(
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
-    author VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL
 );
---
+/*
+ separator
+ */
 -- @block
 INSERT INTO library.book (name, author)
 VALUES ('temp', 'temp');
---
+/*
+ separator
+ */
 -- @block
-SELECT *
+SELECT author,
+    name
 FROM library.book;
---
+/*
+ separator
+ */
 -- @block
 UPDATE library.book
 SET name = 'why do we sleep'
 WHERE name = 'how to sleep';
+/*
+ separator
+ */
 -- @block
 DELETE FROM library.book
 WHERE author = 'Dr John';
-
+/*
+ separator
+ */
+-- @block
+DELETE FROM library.book
+WHERE id > 2;
+/*
+ separator
+ */
 -- @block
 CREATE TABLE library.person(
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
     dateOfBirth DATE NOT NULL
 );
+/*
+ separator
+ */
+-- @block
+INSERT INTO library.person (name, dateOfBirth)
+VALUES ('Cliff Boothman', '1997-5-31'),
+    ('Constantin Chevalier', '1996-12-20'),
+    ('Sascha Ritter', '1995-9-5'),
+    ('Leonidas Xanthopoulos', '1994-6-18'),
+    ('Zulfikar Mohammad', '1993-1-24'),
+    ('Nevan Higgins', '1992-12-12'),
+    ('Asami Sugimoto', '1998-3-17'),
+    ('Sung-Hyun Yoon', '1999-10-28'),
+    ('Neusa Costa', '2000-7-5'),
+    ('Kulap Wattana', '2001-4-8'),
+    ('Rosy Joseph', '2002-8-27');
+/*
+ separator
+ */
+-- @block
+SELECT name,
+    dateOfBirth AS DATE
+FROM library.person;
