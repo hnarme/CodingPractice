@@ -9,9 +9,10 @@
             "server": "localhost",
             "port": 3306,
             "driver": "MySQL",
-            "name": "airbnb",
-            "database": "airbnb",
-            "username": "root"
+            "name": "LocalDatabase",
+            "database": "library",
+            "username": "root",
+            "password": "root"
         }
     ]
 }

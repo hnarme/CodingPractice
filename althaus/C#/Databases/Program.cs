@@ -4,7 +4,7 @@ using Mysqlx.Crud;
 
 MySql.Data.MySqlClient.MySqlConnection conn;
 string myConnectionString;
-const int MAX_CHOICE_NUM = 13;
+const int MAX_CHOICE_NUM = 16;
 int userChoice = -1;
 
 myConnectionString = "server=127.0.0.1;uid=root;" +
@@ -44,7 +44,7 @@ void MainMenu()
         Console.WriteLine("Pick an option:");
         Console.WriteLine("Option 1: Book options");
         Console.WriteLine("Option 2: User options");
-        Console.WriteLine("Option 13: Exit");
+        Console.WriteLine("Option 17: Exit");
         MenuSystem();
     }
     while (userChoice < 1 || userChoice > MAX_CHOICE_NUM);
@@ -59,8 +59,8 @@ void BookMenu()
         Console.WriteLine("Option 4: Display all books");
         Console.WriteLine("Option 5: Rename a books name");
         Console.WriteLine("Option 6: Delete a book");
-        //Console.WriteLine("Opption 7: Borrow a book");
-        Console.WriteLine("Option 12: Back to the main menu");
+        Console.WriteLine("Opption 7: Borrowing and returning options");
+        Console.WriteLine("Option 8: Back to the main menu");
         MenuSystem();
 
     }
@@ -72,11 +72,27 @@ void PeopleMenu()
     do
     {
         Console.WriteLine("Pick an option:");
-        Console.WriteLine("Option 8: Add a new person to the system");
-        Console.WriteLine("Option 9: Display all people on the system");
-        Console.WriteLine("Option 10: Rename a persons name");
-        Console.WriteLine("Option 11: Remove a person from the system");
-        Console.WriteLine("Option 12: Back to the main menu");
+        Console.WriteLine("Option 9: Add a new person to the system");
+        Console.WriteLine("Option 10: Display all people on the system");
+        Console.WriteLine("Option 11: Rename a persons name");
+        Console.WriteLine("Option 12: Remove a person from the system");
+        Console.WriteLine("Option 8: Back to the main menu");
+        MenuSystem();
+
+    }
+    while (userChoice < 1 || userChoice > MAX_CHOICE_NUM);
+}
+
+void BorrowBookMenu()
+{
+    do
+    {
+        Console.WriteLine("Pick an option:");
+        Console.WriteLine("Option 13: Borrow a book");
+        Console.WriteLine("Option 14: Return a borrowed book");
+        Console.WriteLine("Option 15: Rename a persons name");
+        Console.WriteLine("Option 16: Remove a person from the system");
+        Console.WriteLine("Option 8: Back to the main menu");
         MenuSystem();
 
     }
@@ -95,13 +111,17 @@ void MenuSystem()
         case 4: DisplayLibrary(); break;
         case 5: UpdateBook(); break;
         case 6: DeleteBook(); break;
-        //case 7: BorrowBook(); break;
-        case 8: CreatePeople(); break;
-        case 9: DisplayPeople(); break;
-        case 10: UpdatePeople(); break;
-        case 11: DeletePeople(); break;
-        case 12: MainMenu(); break;
-        case 13: Console.WriteLine("Goodbye!"); return;
+        case 7: BorrowBookMenu(); break;
+        case 8: MainMenu(); break;
+        case 9: CreatePeople(); break;
+        case 10: DisplayPeople(); break;
+        case 11: UpdatePeople(); break;
+        case 12: DeletePeople(); break;
+        case 13: BorrowBook(); break;
+        case 14: ReturnBook(); break;
+        case 15: DisplayBorrowedPeople(); break;
+        case 16: DisplayedNonBorrowed(); break;
+        case 17: Console.WriteLine("Goodbye!"); return;
     }
 }
 
@@ -187,4 +207,31 @@ void DeletePeople()
     string personName = Console.ReadLine();
     SqlCommand($"DELETE FROM person WHERE name = '{personName}';");
     Console.WriteLine($"You have successfully deleted that person.");
+}
+
+void BorrowBook()
+{
+    // Only 1 person can borrow a book at a time
+
+    Console.WriteLine("To borrow a book please type the first name of the person borrowing the book.");
+    string borrowerName = Console.ReadLine();
+    Console.WriteLine("Now the name of the book you want to borrow.");
+    string bookName = Console.ReadLine();
+    SqlCommand($"UPDATE book SET borrower_ID = 1 WHERE name = '{borrowerName}';");
+    Console.WriteLine($"{borrowerName} has borrowed the {bookName}.");
+}
+
+void ReturnBook()
+{
+
+}
+
+void DisplayBorrowedPeople()
+{
+
+}
+
+void DisplayedNonBorrowed()
+{
+
 }

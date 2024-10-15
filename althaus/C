@@ -166,3 +166,21 @@ VALUES ('Cliff Boothman', '1997-5-31'),
 SELECT name,
     dateOfBirth AS DATE
 FROM library.person;
+/*
+ separator
+ */
+-- @block
+ALTER TABLE library.book
+ADD borrower_ID INT;
+/*
+ separator
+ */
+-- @block
+ALTER TABLE library.book
+    RENAME COLUMN Borrower_ID TO borrower_ID;
+/*
+ separator
+ */
+-- @block
+UPDATE library.book
+SET borrower_ID = 0;
