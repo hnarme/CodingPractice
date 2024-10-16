@@ -17,11 +17,9 @@ public class StaffController : Controller
     {
         allStaff.Staff_Id = 1;
         allStaff.Forename = "John";
-        allStaff.Forename = "John";
-
-    public string Surname { get; set; }
-    public DateOnly DateOfBirth { get; set; }
-    public string Email { get; set; }
+        allStaff.Surname = "Doe";
+        allStaff.DateOfBirth = new DateOnly(1997, 5, 31);
+        allStaff.Email = "johndoe@greenplant.com";
         return View(allStaff);
     }
 
