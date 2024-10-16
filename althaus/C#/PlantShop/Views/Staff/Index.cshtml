@@ -1,7 +1,66 @@
-﻿@{
+﻿@model Staff;
+
+@{
     ViewData["Title"] = "Staff Page";
 }
+<h1>Staff List</h1>
+@*<hr />*@
 
-<div class="text-center">
-    <h1 class="display-4">Staff</h1>
+<div class="btn-group-top">
+    <a asp-controller="Staff" asp-action="Index" class="btn btn-primary float-end">
+        Add User
+    </a>
+</div>
+
+<div class="page-container">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Staff Id</th>
+                    <th>Forename</th>
+                    <th>Surname</th>
+                    <th>Date of Birth</th>
+                    <th>Email</th>
+                    <th style="width: 1px;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        @Model.Staff_Id
+                    </td>
+                    <td>
+                        @Model.Forename
+                    </td>
+                    <td>
+                        @Model.Surname
+                    </td>
+                    <td>
+                        @Model.DateOfBirth
+                    </td>
+                    <td>
+                        @Model.Email
+                    </td>
+                    <td>
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false" id="btnToggleActions">
+                                Actions
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btnToggleActions">
+                                <li><a asp-controller="Staff" asp-action="Details"
+                                        asp-route-id="@Model.Staff_Id">View</a></li>
+                                class="dropdown-item">View</a></li>
+                                <li><a asp-controller="Staff" asp-action="Edit" asp-route-id="@Model.Staff_Id"
+                                        class="dropdown-item">Edit</a></li>
+                                <li><a asp-controller="Staff" asp-action="Delete" asp-route-id="@Model.Staff_Id"
+                                        class="dropdown-item">Delete</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
