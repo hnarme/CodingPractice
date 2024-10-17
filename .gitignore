@@ -5,6 +5,7 @@
 
 .metadata
 bin/
+obj/
 tmp/
 *.tmp
 *.bak
@@ -189,5 +190,3 @@ temp_*
 *.csproj.nuget.dgspec.json
 *.csproj.nuget.g.props
 *project.assets.json
-/obj
-/bin
