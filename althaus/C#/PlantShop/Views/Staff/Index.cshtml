@@ -1,4 +1,4 @@
-﻿@model Staff;
+﻿@model List<Staff>;
 
 @{
     ViewData["Title"] = "Staff Page";
@@ -26,40 +26,42 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>
-                        @Model.Staff_Id
-                    </td>
-                    <td>
-                        @Model.Forename
-                    </td>
-                    <td>
-                        @Model.Surname
-                    </td>
-                    <td>
-                        @Model.DateOfBirth
-                    </td>
-                    <td>
-                        @Model.Email
-                    </td>
-                    <td>
-                        <div class="dropdown">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown"
-                                aria-expanded="false" id="btnToggleActions">
-                                Actions
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="btnToggleActions">
-                                <li><a asp-controller="Staff" asp-action="Details"
-                                        asp-route-id="@Model.Staff_Id">View</a></li>
-                                class="dropdown-item">View</a></li>
-                                <li><a asp-controller="Staff" asp-action="Edit" asp-route-id="@Model.Staff_Id"
-                                        class="dropdown-item">Edit</a></li>
-                                <li><a asp-controller="Staff" asp-action="Delete" asp-route-id="@Model.Staff_Id"
-                                        class="dropdown-item">Delete</a></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
+                @foreach (Staff staff in @Model)
+                {
+                    <tr>
+                        <td>
+                            @staff.Staff_Id
+                        </td>
+                        <td>
+                            @staff.Forename
+                        </td>
+                        <td>
+                            @staff.Surname
+                        </td>
+                        <td>
+                            @staff.DateOfBirth
+                        </td>
+                        <td>
+                            @staff.Email
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown"
+                                    aria-expanded="false" id="btnToggleActions">
+                                    Actions
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="btnToggleActions">
+                                    <li><a asp-controller="Staff" asp-action="Details" asp-route-id="@staff.Staff_Id"
+                                            class="dropdown-item">View</a></li>
+                                    <li><a asp-controller="Staff" asp-action="Edit" asp-route-id="@staff.Staff_Id"
+                                            class="dropdown-item">Edit</a></li>
+                                    <li><a asp-controller="Staff" asp-action="Delete" asp-route-id="@staff.Staff_Id"
+                                            class="dropdown-item">Delete</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                }
             </tbody>
         </table>
     </div>

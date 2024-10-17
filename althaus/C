@@ -279,3 +279,12 @@ VALUES (
         '2002-8-27',
         'rosyjoseph@greenplant.com'
     );
+/*
+ separator
+ */
+-- @block
+SELECT 0
+FROM plantshop.staff;
+/*
+ separator
+ */

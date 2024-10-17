@@ -13,14 +13,10 @@ public class StaffController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index(Staff allStaff)
+    public IActionResult Index(Staff staff)
     {
-        allStaff.Staff_Id = 1;
-        allStaff.Forename = "John";
-        allStaff.Surname = "Doe";
-        allStaff.DateOfBirth = new DateOnly(1997, 5, 31);
-        allStaff.Email = "johndoe@greenplant.com";
-        return View(allStaff);
+        staff.DatabaseConnection();
+        return View(staff.GetStaff());
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
