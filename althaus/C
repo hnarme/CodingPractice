@@ -288,3 +288,10 @@ FROM plantshop.staff;
 /*
  separator
  */
+-- @block
+INSERT INTO staff (forename, surname, dateOfBirth, email)
+VALUES (fname, sname, '2000-4-21', '@greenplant.com')
+FROM plantshop.staff;
+/*
+ separator
+ */

@@ -9,7 +9,7 @@
 
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Index">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Staff_Id" />
             <div class="form-group">
@@ -31,7 +31,7 @@
                 <label for="staticEmail" class="col-sm-3 col-form-label">Staff Email:</label>
                 <div class="col-sm-10">
                     <input type="text" readonly class="form-control-plaintext" id="staticEmail"
-                        value="@Model.Forename@Model.Surname P@greenplant.com">
+                        value="@Model.Email*YourName@greenplant.com*" placeholder="*YourName@greenplant.com*">
                 </div>
             </div>
             <div class="form-group">

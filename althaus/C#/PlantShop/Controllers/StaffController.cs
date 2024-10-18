@@ -47,7 +47,8 @@ public class StaffController : Controller
 
     public ActionResult Create(Staff staff)
     {
-        //Database.Instance.AddStaff(staff);
+        Database.Instance.AddStaff(staff);
+        staff.Email = staff.Forename + staff.Surname + "@greenplant.com";
         return View(staff);
     }
 
@@ -56,6 +57,4 @@ public class StaffController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
-
-
 }

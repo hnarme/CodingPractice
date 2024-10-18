@@ -74,18 +74,24 @@ public class Database
         }
     }
 
-
-
-    /*     public void SqlCommand(string sql)
+    public void AddStaff(Staff staff)
+    {
+        try
         {
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-            MySqlDataReader rdr = cmd.ExecuteReader();
+            MySqlConnection conn = GetOpenConnection();
 
-            while (rdr.Read())
-            {
-                Console.WriteLine(rdr[0] + " -- " + rdr[1]);
-            }
-            rdr.Close();
-        } */
+            string sql = "INSERT INTO staff (forename, surname, dateOfBirth, email) VALUES(@staff.Forename, @staff.Surname, @staff.DateOfBirth, @staff.Email) FROM plantshop.staff;";
 
+            Console.WriteLine(sql);
+            MySqlCommand command = new MySqlCommand(sql, conn);
+            command.Parameters.AddWithValue("@staff.Forename, @staff.Surname, @staff.DateOfBirth, @staff.Email", staff.Staff_Id);
+            command.ExecuteNonQuery();
+
+            conn.Close();
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine(exception.Message);
+        }
+    }
 }
