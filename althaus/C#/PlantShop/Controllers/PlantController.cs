@@ -4,11 +4,11 @@ using PlantShop.Models;
 
 namespace PlantShop.Controllers;
 
-public class ManagerController : Controller
+public class PlantController : Controller
 {
-    private readonly ILogger<ManagerController> _logger;
+    private readonly ILogger<PlantController> _logger;
 
-    public ManagerController(ILogger<ManagerController> logger)
+    public PlantController(ILogger<PlantController> logger)
     {
         _logger = logger;
     }
