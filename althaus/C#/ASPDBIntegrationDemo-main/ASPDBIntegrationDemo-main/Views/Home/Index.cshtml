@@ -1,0 +1,36 @@
+﻿@model List<Item>
+
+@{
+  ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+  <h1 class="display-4">Welcome</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h2>Item List</h2>
+      <ul>
+        @foreach (var item in Model)
+        {
+          <li>@item.ItemName</li>
+        }
+      </ul>
+    </div>
+
+    <div class="col-sm">
+      <h2>Add Item</h2>
+      <form asp-action="CreateItemResult">
+        <div class="form-group">
+          <label for="ItemName">Item name</label>
+          <input name="ItemName" />
+        </div>
+        <br />
+        <div class="form-group">
+          <input type="submit" value="Create Item" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
