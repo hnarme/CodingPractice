@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "f:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\althaus\\Critter\\Critter.csproj": {}
+    "F:\\Users\\Hannah\\Documents\\CodingPractice\\althaus\\C#\\Critter\\Critter.csproj": {}
   },
   "projects": {
-    "f:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\althaus\\Critter\\Critter.csproj": {
+    "F:\\Users\\Hannah\\Documents\\CodingPractice\\althaus\\C#\\Critter\\Critter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "f:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\althaus\\Critter\\Critter.csproj",
+        "projectUniqueName": "F:\\Users\\Hannah\\Documents\\CodingPractice\\althaus\\C#\\Critter\\Critter.csproj",
         "projectName": "Critter",
-        "projectPath": "f:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\althaus\\Critter\\Critter.csproj",
+        "projectPath": "F:\\Users\\Hannah\\Documents\\CodingPractice\\althaus\\C#\\Critter\\Critter.csproj",
         "packagesPath": "C:\\Users\\Hannah\\.nuget\\packages\\",
-        "outputPath": "f:\\Users\\Hannah\\Documents\\CodingPractice\\C#\\althaus\\Critter\\obj\\",
+        "outputPath": "F:\\Users\\Hannah\\Documents\\CodingPractice\\althaus\\C#\\Critter\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

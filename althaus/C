@@ -283,7 +283,7 @@ VALUES (
  separator
  */
 -- @block
-SELECT 0
+SELECT *
 FROM plantshop.staff;
 /*
  separator

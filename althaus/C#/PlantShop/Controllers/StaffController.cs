@@ -7,39 +7,47 @@ namespace PlantShop.Controllers;
 public class StaffController : Controller
 {
     private readonly ILogger<StaffController> _logger;
-    public Staff staff = new Staff();
+    private readonly IConfiguration _configuration;
+    //public Staff staff = new Staff();
 
-    public StaffController(ILogger<StaffController> logger)
+    public StaffController(ILogger<StaffController> logger, IConfiguration configuration)
     {
         _logger = logger;
+        _configuration = configuration;
     }
 
     public IActionResult Index()
     {
-        staff.DatabaseConnection();
-        return View(staff.GetStaff());
+        //staff.DatabaseConnection();
+        //return View(staff.GetStaff());
+        Database.Instance.SetConnectionString(_configuration.GetValue<string>("ConnectionString"));
+        return View(Database.Instance.GetAllStaff());
     }
 
     public ViewResult Display(int id)
     {
-        Staff idStaff = staff.GetStaff().FirstOrDefault(staff => staff.Staff_Id == id);
+        Database.Instance.SetConnectionString(_configuration.GetValue<string>("ConnectionString"));
+        Staff idStaff = Database.Instance.GetAllStaff().FirstOrDefault(staff => staff.Staff_Id == id);
         return View(idStaff);
     }
 
     public ViewResult Edit(int id)
     {
-        Staff editStaff = staff.GetStaff().FirstOrDefault(staff => staff.Staff_Id == id);
+        Database.Instance.SetConnectionString(_configuration.GetValue<string>("ConnectionString"));
+        Staff editStaff = Database.Instance.GetAllStaff().FirstOrDefault(staff => staff.Staff_Id == id);
         return View(editStaff);
     }
 
     public ViewResult Delete(int id)
     {
-        Staff deleteStaff = staff.GetStaff().FirstOrDefault(staff => staff.Staff_Id == id);
+        Database.Instance.SetConnectionString(_configuration.GetValue<string>("ConnectionString"));
+        Staff deleteStaff = Database.Instance.GetAllStaff().FirstOrDefault(staff => staff.Staff_Id == id);
         return View(deleteStaff);
     }
 
     public ActionResult Create(Staff staff)
     {
+        //Database.Instance.AddStaff(staff);
         return View(staff);
     }
 

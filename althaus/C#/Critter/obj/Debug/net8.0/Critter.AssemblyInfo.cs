@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Critter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10da317e2ccc1fea8176c61a00120872fedf121e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b392fe1ca031c011e518f236b432cf97734db30")]
 [assembly: System.Reflection.AssemblyProductAttribute("Critter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Critter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
