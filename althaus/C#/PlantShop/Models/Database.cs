@@ -56,12 +56,12 @@ public class Database
                 string staffID = staff.Staff_Id.ToString();
                 staffID = reader[0].ToString();
                 staff.Staff_Id = int.Parse(staffID);
-                staff.Forename = reader[0].ToString();
-                staff.Surname = reader[0].ToString();
+                staff.Forename = reader[1].ToString();
+                staff.Surname = reader[2].ToString();
                 DateOnly staffDOB = new DateOnly(staff.DateOfBirth.Year, staff.DateOfBirth.Month, staff.DateOfBirth.Day);
                 string staffDateOB = staffDOB.ToString();
-                staffDateOB = reader[0].ToString();
-                staff.Email = reader[0].ToString();
+                staffDateOB = reader[3].ToString();
+                staff.Email = reader[4].ToString();
                 staffList.Add(staff);
             }
             reader.Close();
