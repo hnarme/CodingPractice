@@ -210,6 +210,11 @@ ALTER TABLE plantshop.plant
  separator
  */
 -- @block
+ALTER TABLE plantshop.plant DROP COLUMN email;
+/*
+ separator
+ */
+-- @block
 INSERT INTO plantshop.plant (name, family)
 VALUES (
         'Cardinal flower',
