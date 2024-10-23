@@ -9,8 +9,7 @@ public class StaffApiController : ControllerBase
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public ActionResult AddStaff(Staff staff)
     {
-        Database.Instance.AddStaff(staff);
-        return Created();
+        return Ok(Database.Instance.AddStaff());
     }
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
