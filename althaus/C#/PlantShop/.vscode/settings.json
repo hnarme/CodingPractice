@@ -10,9 +10,9 @@
             "port": 3306,
             "driver": "MySQL",
             "name": "LocalDatabase",
-            "password": "root",
-            "database": "PlantShop",
-            "username": "root"
+            "database": "plantshop",
+            "username": "root",
+            "password": "root"
         }
     ]
 }

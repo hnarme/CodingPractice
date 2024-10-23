@@ -187,19 +187,19 @@ public class Database
         }
     }
 
-        public void UpdateStaffName(UpdateStaffName updateStaffName)
+    public void UpdateStaffName(UpdateStaffName updateStaffName)
     {
         try
         {
             MySqlConnection conn = GetOpenConnection();
 
             string sql = "UPDATE staff SET forename = @newName WHERE name = @oldName";
-            
+
 
             Console.WriteLine(sql);
             MySqlCommand command = new MySqlCommand(sql, conn);
-            command.Parameters.AddWithValue("@oldName", updateStaffName.oldName);
-            command.Parameters.AddWithValue("@NewName", updateStaffName.newName);
+            command.Parameters.AddWithValue("@oldName", updateStaffName.OldName);
+            command.Parameters.AddWithValue("@NewName", updateStaffName.NewName);
 
             command.ExecuteNonQuery();
 
