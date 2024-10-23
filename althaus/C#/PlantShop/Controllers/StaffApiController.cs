@@ -18,8 +18,9 @@ public class StaffApiController : ControllerBase
         return Ok(Database.Instance.GetAllStaff());
     }
     [HttpPut]
-    public ActionResult UpdateItem(Staff staff)
+    public ActionResult UpdateItem(UpdateStaffName updateStaffName)
     {
+        Database.Instance.UpdateStaffName(updateStaffName);
         return Ok();
     }
     [HttpDelete]
