@@ -28,11 +28,6 @@ public class StaffController : Controller
         return View(idStaff);
     }
 
-    public List<Staff> GetStaff()
-    {
-        return Database.Instance.GetAllStaff();
-    }
-
     public ActionResult Create(Staff staff)
     {
         return View(staff);
