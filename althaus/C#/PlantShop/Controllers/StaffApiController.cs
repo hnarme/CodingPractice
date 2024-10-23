@@ -14,7 +14,7 @@ public class StaffApiController : ControllerBase
     }
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public ActionResult<List<Staff>> GetAllStaff()
+    public ActionResult<List<Staff>> GetStaff()
     {
         return Ok(Database.Instance.GetAllStaff());
     }
