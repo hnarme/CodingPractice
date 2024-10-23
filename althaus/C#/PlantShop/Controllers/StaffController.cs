@@ -8,7 +8,6 @@ public class StaffController : Controller
 {
     private readonly ILogger<StaffController> _logger;
     private readonly IConfiguration _configuration;
-    //public Staff staff = new Staff();
 
     public StaffController(ILogger<StaffController> logger, IConfiguration configuration)
     {
@@ -18,8 +17,6 @@ public class StaffController : Controller
 
     public IActionResult Index()
     {
-        //staff.DatabaseConnection();
-        //return View(staff.GetStaff());
         Database.Instance.SetConnectionString(_configuration.GetValue<string>("ConnectionString"));
         return View(Database.Instance.GetAllStaff());
     }
@@ -31,6 +28,19 @@ public class StaffController : Controller
         return View(idStaff);
     }
 
+    public ActionResult Create(Staff staff)
+    {
+        return View(staff);
+    }
+
+    public ActionResult CreateResult(Staff staff)
+    {
+        Database.Instance.AddStaff(staff);
+        staff.Email = staff.Forename + staff.Surname + "@greenplant.com";
+        staff.Password = "password";
+        return View(staff);
+    }
+
     public ViewResult Edit(int id)
     {
         Database.Instance.SetConnectionString(_configuration.GetValue<string>("ConnectionString"));
@@ -38,18 +48,13 @@ public class StaffController : Controller
         return View(editStaff);
     }
 
-    public ViewResult Delete(int id)
+    public ViewResult Delete(int id, Staff staff)
     {
         Database.Instance.SetConnectionString(_configuration.GetValue<string>("ConnectionString"));
         Staff deleteStaff = Database.Instance.GetAllStaff().FirstOrDefault(staff => staff.Staff_Id == id);
-        return View(deleteStaff);
-    }
+        Database.Instance.DeleteStaff(staff);
 
-    public ActionResult Create(Staff staff)
-    {
-        Database.Instance.AddStaff(staff);
-        staff.Email = staff.Forename + staff.Surname + "@greenplant.com";
-        return View(staff);
+        return View(deleteStaff);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -57,4 +62,5 @@ public class StaffController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
 }

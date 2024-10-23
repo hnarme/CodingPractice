@@ -1,0 +1,33 @@
+@model Plant;
+
+@{
+    ViewData["Title"] = "Delete Plant";
+}
+
+<h2>Remove @Model.Name from the system</h2>
+
+<div>
+    <hr />
+    <div class="alert alert-danger">
+        Are you sure you want to delete?
+    </div>
+    <dl class="container">
+        <div class="col-md-6 agile_tv_series_grid_right">
+            <p class="fexi_header"><span>Plant ID: </span>@Model.Plant_Id</p>
+            <p class="fexi_header"><span>Name: </span>@Model.Name</p>
+            <p class="fexi_header_para"><span>Family: </span> @Model.Family </p>
+        </div>
+    </dl>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Delete">
+            <hr />
+            <div>
+                <input asp-action="Index" type="submit" value="Delete" class="btn btn-primary" />
+                <a asp-controller="plant" asp-action="Index" class="btn btn-primary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

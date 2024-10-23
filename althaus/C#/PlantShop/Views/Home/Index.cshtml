@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Staff;
+@{
     ViewData["Title"] = "Login Page";
 }
 
@@ -10,20 +11,21 @@
     <div class="row justify-content-center">
         <div class="col-5">
             <div class="LoginForm">
-                <form asp-action="Login">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Enter email" name="Email">
+                <form asp-action="Index">
+                    <!-- Email input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <input type="email" name="email" class="form-control" />
+                        <label class="form-label" for="email">Email address</label>
+                    </div>
 
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
-                            name="Password">
+                    <!-- Password input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <input type="password" name="password" class="form-control" />
+                        <label class="form-label" for="password">Password</label>
                     </div>
-                    <br>
-                    <div class="form-group">
-                        <input type="submit" class="btn btn-dark" value="Login" />
-                    </div>
+
+                    <!-- Submit button -->
+                    <input asp-action="Index" type="submit" value="Sign in" class="btn btn-primary btn-block mb-4" />
                 </form>
             </div>
         </div>

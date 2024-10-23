@@ -190,22 +190,72 @@ SET borrower_ID = 0;
 --
 --
 -- COMMANDS for plant shop database
+/*
+ separator
+ */
+-- COMMANDS for plant shop database plant Table
+-- @block
+CREATE TABLE plantshop.plant(
+    plant_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    family VARCHAR(50) NOT NULL
+);
+/*
+ separator
+ */
+-- @block
+ALTER TABLE plantshop.plant
+    RENAME COLUMN type to family;
+/*
+ separator
+ */
+-- @block
+INSERT INTO plantshop.plant (name, family)
+VALUES (
+        'Cardinal flower',
+        'Campanulaceae'
+    ),
+    (
+        'Algerian Ivy',
+        'Araliaceae'
+    ),
+    (
+        'American Elderberry',
+        'Adoxaceae'
+    ),
+    (
+        'Angelonia',
+        'Plantaginaceae'
+    ),
+    (
+        'Blackberry Lily',
+        'Iridaceae'
+    ),
+    (
+        'Bellflowers',
+        'Campanulaceae'
+    ),
+    (
+        'Lace aloe',
+        'Asphodelaceae'
+    ),
+    ('Lily', 'Liliaceae');
+/*
+ separator
+ */
+-- @block
+SELECT *
+FROM plantshop.plant;
+/*
+ separator
+ */
+-- COMMANDS for plant shop database staff Table
 -- @block
 CREATE TABLE plantshop.staff(
     staff_id INT PRIMARY KEY AUTO_INCREMENT,
     forename VARCHAR(255) NOT NULL,
     surname VARCHAR(255) NOT NULL,
     dateOfBirth DATE NOT NULL,
-    email VARCHAR(50) NOT NULL
-);
-/*
- separator
- */
--- @block
-CREATE TABLE plantshop.plant(
-    plant_id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(255) NOT NULL,
-    type VARCHAR(50) NOT NULL,
     email VARCHAR(50) NOT NULL
 );
 /*
@@ -289,9 +339,53 @@ FROM plantshop.staff;
  separator
  */
 -- @block
-INSERT INTO staff (forename, surname, dateOfBirth, email)
-VALUES (fname, sname, '2000-4-21', '@greenplant.com')
-FROM plantshop.staff;
+ALTER TABLE plantshop.staff
+VALUES (
+        'fname',
+        'sname',
+        '2000-4-21',
+        'cliffboothman@greenplant.com'
+    );
+/*
+ separator
+ */
+-- @block
+INSERT INTO plantshop.staff (forename, surname, dateOfBirth, email)
+VALUES (
+        '@forename',
+        '@surname',
+        '@DateOfBirth',
+        '@email'
+    );
+/*
+ separator
+ */
+-- @block
+DELETE FROM plantshop.staff
+WHERE surname = 'Name';
+/*
+ separator
+ */
+-- @block
+ALTER TABLE plantshop.staff
+ADD password VARCHAR(50) NOT NULL;
+/*
+ separator
+ */
+-- @block
+ALTER TABLE plantshop.staff
+VALUES (
+        'fname',
+        'sname',
+        '2000-4-21',
+        'cliffboothman@greenplant.com'
+    );
+/*
+ separator
+ */
+-- @block
+UPDATE plantshop.staff
+SET password = 'password';
 /*
  separator
  */

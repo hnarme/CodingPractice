@@ -9,40 +9,42 @@
 
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Index">
+        <form asp-action="CreateResult">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Staff_Id" />
             <div class="form-group">
                 <label asp-for="Forename" class="control-label">Forname:</label>
-                <input asp-for="Forename" class="form-control" />
+                <input name="Forename" asp-for="Forename" class="form-control" />
                 <span asp-validation-for="Forename" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Surname" class="control-label">Surname:</label>
-                <input asp-for="Surname" class="form-control" />
+                <input name="Surname" asp-for="Surname" class="form-control" />
                 <span asp-validation-for="Surname" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DateOfBirth" class="control-label">Date of birth:</label>
-                <input asp-for="DateOfBirth" class="form-control" />
+                <input name="DateOfBirth" asp-for="DateOfBirth" class="form-control" />
                 <span asp-validation-for="DateOfBirth" class="text-danger"></span>
             </div>
             <div class="form-group row">
-                <label for="staticEmail" class="col-sm-3 col-form-label">Staff Email:</label>
+                <label for="Email" class="col-sm-3 col-form-label">Staff Email:</label>
                 <div class="col-sm-10">
-                    <input type="text" readonly class="form-control-plaintext" id="staticEmail"
-                        value="@Model.Email*YourName@greenplant.com*" placeholder="*YourName@greenplant.com*">
+                    <input name="Email" type="text" readonly class="form-control-plaintext" id="staticEmail"
+                        placeholder="*YourName@greenplant.com*">
                 </div>
             </div>
             <div class="form-group">
-                <input asp-action="Create" type="submit" value="Create" class="btn btn-primary" />
+                <input asp-action="Index" type="submit" value="Register Staff" class="btn btn-primary" />
+                <a asp-controller="Staff" asp-action="Index" class="btn btn-primary">Cancel</a>
             </div>
         </form>
     </div>
 </div>
+</div>
 <hr />
 <div>
-    <a asp-controller="Staff" asp-action="Index" class="btn btn-primary">Cancel</a>
+
 </div>
 
 @section Scripts {
