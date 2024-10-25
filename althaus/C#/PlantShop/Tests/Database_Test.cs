@@ -7,11 +7,12 @@ public class Database_Test
     [TestMethod]
     public void CheckDatabaseConnection()
     {
-        try{
-        Database.Instance.GetAllPlant();
+        try
+        {
+            Database.Instance.GetAllPlant();
 
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
             Assert.Fail(ex.Message);
         }
@@ -22,21 +23,21 @@ public class Database_Test
     {
         Plant plant = new Plant();
         plant.Name = "TestMethod";
-        plant.family = "Test";
+        plant.Family = "Test";
         Database.Instance.AddPlant(plant);
         List<Plant> plants = Database.Instance.GetAllPlant();
         bool found = false;
-        foreach(Plant plant in plants)
+        foreach (Plant p in plants)
         {
-            if(plant.Name == "TestMethod" && plant.Family == "Test")
+            if (p.Name == "TestMethod" && p.Family == "Test")
             {
                 found = true;
             }
-            if(!found)
+            if (!found)
             {
                 Assert.Fail("Plant not found");
             }
-            Database.Instance.DeletePlant(plant);
+            Database.Instance.DeletePlant(p);
         }
     }
 }
