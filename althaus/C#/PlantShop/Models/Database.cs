@@ -114,7 +114,7 @@ public class Database
             string sql = "UPDATE plant SET name = @Newname WHERE plant_id = @plant_id;";
             Console.WriteLine(sql);
             MySqlCommand command = new MySqlCommand(sql, conn);
-            command.Parameters.AddWithValue("@Newname", plant.NewName);
+            command.Parameters.AddWithValue("@Newname", plant.Name);
             command.Parameters.AddWithValue("@name", plant.Plant_Id);
 
             command.ExecuteNonQuery();
