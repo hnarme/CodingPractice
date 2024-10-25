@@ -1,0 +1,186 @@
+-- Commands for airbnb
+-- @block
+CREATE TABLE airbnb.User(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    bio TEXT,
+    country VARCHAR(2)
+);
+-- @block
+INSERT INTO airbnb.User(email, bio, country)
+VALUES(
+        'hello@world.com',
+        'i love strangers',
+        'US'
+    );
+-- @block
+SELECT *
+FROM airbnb.user;
+-- @block
+SELECT email,
+    id
+FROM airbnb.User;
+-- @block
+SELECT email,
+    id
+FROM airbnb.User
+LIMIT 2;
+-- @block
+SELECT email,
+    id
+FROM airbnb.User
+ORDER BY id ASC
+LIMIT 2;
+-- @block
+SELECT email,
+    id
+FROM airbnb.User
+WHERE country = 'US'
+    AND id > 1
+ORDER BY id DESC
+LIMIT 2;
+-- @block
+SELECT email,
+    id
+FROM airbnb.User
+WHERE country = 'US'
+    AND email LIKE 'h%'
+ORDER BY id DESC
+LIMIT 2;
+-- @block
+CREATE INDEX email_index ON airbnb.Users(email);
+-- @block
+CREATE TABLE airbnb.Room(
+    id INT AUTO_INCREMENT,
+    street VARCHAR(255),
+    owner_id INT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (owner_id) REFERENCES airbnb.Users(id)
+);
+-- @block
+INSERT INTO airbnb.Room(owner_id, street)
+VALUES (1, 'san diego sailboat'),
+    (1, 'nan tucket cottage'),
+    (1, 'vail cabin'),
+    (1, 'sf cardboard box');
+-- @block
+SELECT *
+FROM user
+    INNER JOIN airbnb.Rooms ON airbnb.Rooms.owner_id = airbnb.Users.id;
+-- @block
+CREATE TABLE airbnb.Customer(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    dateOfBirth TIMESTAMP NOT NULL
+);
+-- @block
+CREATE TABLE airbnb.Booking(
+    id INT AUTO_INCREMENT,
+    guest_id INT NOT NULL,
+    room_id INT NOT NULL,
+    check_in DATETIME,
+    PRIMARY KEY (id),
+    FOREIGN KEY (guest_id) REFERENCES User(id),
+    FOREIGN KEY (room_id) REFERENCES Room(id)
+);
+-- @block
+SELECT guest_id,
+    street,
+    check_in
+FROM airbnb.booking
+    INNER JOIN room ON room.owner_id = guest_id
+WHERE guest_id = 1;
+--
+--
+--
+--
+--
+-- COMMANDS for library database
+-- @block
+CREATE TABLE library.book(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL
+);
+/*
+ separator
+ */
+-- @block
+INSERT INTO library.book (name, author)
+VALUES ('temp', 'temp');
+/*
+ separator
+ */
+-- @block
+SELECT author,
+    name
+FROM library.book;
+/*
+ separator
+ */
+-- @block
+UPDATE library.book
+SET name = 'why do we sleep'
+WHERE name = 'how to sleep';
+/*
+ separator
+ */
+-- @block
+DELETE FROM library.book
+WHERE author = 'Dr John';
+/*
+ separator
+ */
+-- @block
+DELETE FROM library.book
+WHERE id > 2;
+/*
+ separator
+ */
+-- @block
+CREATE TABLE library.person(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    dateOfBirth DATE NOT NULL
+);
+/*
+ separator
+ */
+-- @block
+INSERT INTO library.person (name, dateOfBirth)
+VALUES ('Cliff Boothman', '1997-5-31'),
+    ('Constantin Chevalier', '1996-12-20'),
+    ('Sascha Ritter', '1995-9-5'),
+    ('Leonidas Xanthopoulos', '1994-6-18'),
+    ('Zulfikar Mohammad', '1993-1-24'),
+    ('Nevan Higgins', '1992-12-12'),
+    ('Asami Sugimoto', '1998-3-17'),
+    ('Sung-Hyun Yoon', '1999-10-28'),
+    ('Neusa Costa', '2000-7-5'),
+    ('Kulap Wattana', '2001-4-8'),
+    ('Rosy Joseph', '2002-8-27');
+/*
+ separator
+ */
+-- @block
+SELECT name,
+    dateOfBirth AS DATE
+FROM library.person;
+/*
+ separator
+ */
+-- @block
+ALTER TABLE library.book
+ADD borrower_ID INT;
+/*
+ separator
+ */
+-- @block
+ALTER TABLE library.book
+    RENAME COLUMN Borrower_ID TO borrower_ID;
+/*
+ separator
+ */
+-- @block
+UPDATE library.book
+SET borrower_ID = 0;

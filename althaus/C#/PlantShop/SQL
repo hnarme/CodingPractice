@@ -1,0 +1,205 @@
+-- @block
+CREATE TABLE plantshop.plant(
+    plant_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    family VARCHAR(50) NOT NULL
+);
+/*
+ separator
+ */
+-- @block
+ALTER TABLE plantshop.plant
+    RENAME COLUMN type to family;
+/*
+ separator
+ */
+-- @block
+ALTER TABLE plantshop.plant DROP COLUMN email;
+/*
+ separator
+ */
+-- @block
+INSERT INTO plantshop.plant (name, family)
+VALUES (
+        'Cardinal flower',
+        'Campanulaceae'
+    ),
+    (
+        'Algerian Ivy',
+        'Araliaceae'
+    ),
+    (
+        'American Elderberry',
+        'Adoxaceae'
+    ),
+    (
+        'Angelonia',
+        'Plantaginaceae'
+    ),
+    (
+        'Blackberry Lily',
+        'Iridaceae'
+    ),
+    (
+        'Bellflowers',
+        'Campanulaceae'
+    ),
+    (
+        'Lace aloe',
+        'Asphodelaceae'
+    ),
+    ('Lily', 'Liliaceae');
+/*
+ separator
+ */
+-- @block
+SELECT *
+FROM plantshop.plant;
+/*
+ separator
+ */
+-- @block
+UPDATE plantshop.plant
+SET name = 'Test',
+    family = 'Tested'
+WHERE name = 'Test0';
+-- COMMANDS for plant shop database staff Table
+-- @block
+CREATE TABLE plantshop.staff(
+    staff_id INT PRIMARY KEY AUTO_INCREMENT,
+    forename VARCHAR(255) NOT NULL,
+    surname VARCHAR(255) NOT NULL,
+    dateOfBirth DATE NOT NULL,
+    email VARCHAR(50) NOT NULL
+);
+/*
+ separator
+ */
+-- @block
+INSERT INTO plantshop.staff (forename, surname, dateOfBirth, email)
+VALUES (
+        'Cliff',
+        'Boothman',
+        '1997-5-31',
+        'cliffboothman@greenplant.com'
+    ),
+    (
+        'Constantin',
+        'Chevalier',
+        '1996-12-20',
+        'constchevalier@greenplant.com'
+    ),
+    (
+        'Sascha',
+        'Ritter',
+        '1995-9-5',
+        'sascharitter@greenplant.com'
+    ),
+    (
+        'Leonidas',
+        'Xanthopoulos',
+        '1994-6-18',
+        'leonidasxantho@greenplant.com'
+    ),
+    (
+        'Javon',
+        'Davis',
+        '1993-1-24',
+        'javondavis@greenplant.com'
+    ),
+    (
+        'Nevan',
+        'Higgins',
+        '1992-12-12',
+        'nevanhiggins@greenplant.com'
+    ),
+    (
+        'Asami',
+        'Sugimoto',
+        '1998-3-17',
+        'asamisugi@greenplant.com'
+    ),
+    (
+        'Sung-Hyun',
+        'Yoon',
+        '1999-10-28',
+        'sunghyunyoon@greenplant.com'
+    ),
+    (
+        'Neusa',
+        'Costa',
+        '2000-7-5',
+        'neusacosta@greenplant.com'
+    ),
+    (
+        'Kulap',
+        'Wattana',
+        '2001-4-8',
+        'kulapwattana@greenplant.com'
+    ),
+    (
+        'Rosy',
+        'Joseph',
+        '2002-8-27',
+        'rosyjoseph@greenplant.com'
+    );
+/*
+ separator
+ */
+-- @block
+SELECT *
+FROM plantshop.staff;
+/*
+ separator
+ */
+-- @block
+ALTER TABLE plantshop.staff
+VALUES (
+        'fname',
+        'sname',
+        '2000-4-21',
+        'cliffboothman@greenplant.com'
+    );
+/*
+ separator
+ */
+-- @block
+INSERT INTO plantshop.staff (forename, surname, dateOfBirth, email)
+VALUES (
+        '@forename',
+        '@surname',
+        '@DateOfBirth',
+        '@email'
+    );
+/*
+ separator
+ */
+-- @block
+DELETE FROM plantshop.staff
+WHERE surname = 'Name';
+/*
+ separator
+ */
+-- @block
+ALTER TABLE plantshop.staff
+ADD password VARCHAR(50) NOT NULL;
+/*
+ separator
+ */
+-- @block
+ALTER TABLE plantshop.staff
+VALUES (
+        'fname',
+        'sname',
+        '2000-4-21',
+        'cliffboothman@greenplant.com'
+    );
+/*
+ separator
+ */
+-- @block
+UPDATE plantshop.staff
+SET password = 'password';
+/*
+ separator
+ */

@@ -4,6 +4,13 @@ using PlantShop.Models;
 [TestClass]
 public class Database_Test
 {
+
+    [TestInitialize]
+    public void Setup()
+    {
+        Database.Instance.SetConnectionString("server=127.0.0.1;uid=root;pwd=root;database=plantshop");
+    }
+
     [TestMethod]
     public void CheckDatabaseConnection()
     {
@@ -22,14 +29,14 @@ public class Database_Test
     public void AddGetAndDeletePlantOnDatabase()
     {
         Plant plant = new Plant();
-        plant.Name = "TestMethod";
-        plant.Family = "Test";
+        plant.Name = "TEST";
+        plant.Family = "TEST";
         Database.Instance.AddPlant(plant);
         List<Plant> plants = Database.Instance.GetAllPlant();
         bool found = false;
         foreach (Plant p in plants)
         {
-            if (p.Name == "TestMethod" && p.Family == "Test")
+            if (p.Name == "TEST" && p.Family == "TEST")
             {
                 found = true;
             }

@@ -135,10 +135,11 @@ public class Database
         {
             MySqlConnection conn = GetOpenConnection();
 
-            string sql = "DELETE FROM plant WHERE name = @name;";
+            string sql = "DELETE FROM plant WHERE name = @name AND family = @family;";
             Console.WriteLine(sql);
             MySqlCommand command = new MySqlCommand(sql, conn);
             command.Parameters.AddWithValue("@name", plant.Name);
+            command.Parameters.AddWithValue("@family", plant.Family);
 
             command.ExecuteNonQuery();
 
