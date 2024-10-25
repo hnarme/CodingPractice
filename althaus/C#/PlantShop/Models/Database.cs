@@ -57,27 +57,27 @@ public class Database
         // Comment out try and catch for Database_Test
         //try
         //{
-            MySqlConnection conn = GetOpenConnection();
+        MySqlConnection conn = GetOpenConnection();
 
-            string sql = "SELECT * FROM plant;";
-            MySqlCommand command = new MySqlCommand(sql, conn);
-            MySqlDataReader reader = command.ExecuteReader();
+        string sql = "SELECT * FROM plant;";
+        MySqlCommand command = new MySqlCommand(sql, conn);
+        MySqlDataReader reader = command.ExecuteReader();
 
-            List<Plant> plantList = new List<Plant>();
-            while (reader.Read())
-            {
-                Plant plant = new Plant();
-                string plantID = plant.Plant_Id.ToString();
-                plantID = reader[0].ToString();
-                plant.Plant_Id = int.Parse(plantID);
-                plant.Name = reader[1].ToString();
-                plant.Family = reader[2].ToString();
-                plantList.Add(plant);
-            }
-            reader.Close();
-            conn.Close();
-            return plantList;
+        List<Plant> plantList = new List<Plant>();
+        while (reader.Read())
+        {
+            Plant plant = new Plant();
+            string plantID = plant.Plant_Id.ToString();
+            plantID = reader[0].ToString();
+            plant.Plant_Id = int.Parse(plantID);
+            plant.Name = reader[1].ToString();
+            plant.Family = reader[2].ToString();
+            plantList.Add(plant);
         }
+        reader.Close();
+        conn.Close();
+        return plantList;
+        //}
         //catch (Exception exception)
         //{
         //    return ErrorListPlant(exception.Message);
