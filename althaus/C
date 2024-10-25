@@ -254,6 +254,11 @@ FROM plantshop.plant;
 /*
  separator
  */
+-- @block
+UPDATE plantshop.plant
+SET name = 'Test',
+    family = 'Tested'
+WHERE name = 'Test0';
 -- COMMANDS for plant shop database staff Table
 -- @block
 CREATE TABLE plantshop.staff(

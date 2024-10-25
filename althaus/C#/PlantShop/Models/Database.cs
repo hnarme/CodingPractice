@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using MySql.Data.MySqlClient;
 using PlantShop.Models;
 
@@ -88,7 +89,7 @@ public class Database
         {
             MySqlConnection conn = GetOpenConnection();
 
-            string sql = "INSERT INTO plant (name, family) VALUES ('@name', '@family');";
+            string sql = "INSERT INTO plant (name, family) VALUES (@name, @family);";
             Console.WriteLine(sql);
             MySqlCommand command = new MySqlCommand(sql, conn);
             command.Parameters.AddWithValue("@name", plant.Name);
@@ -104,17 +105,63 @@ public class Database
         }
     }
 
+    public void EditPlant(Plant plant)
+    {
+        try
+        {
+            MySqlConnection conn = GetOpenConnection();
+
+            string sql = "UPDATE plant SET name = @Newname WHERE plant_id = @plant_id;";
+            Console.WriteLine(sql);
+            MySqlCommand command = new MySqlCommand(sql, conn);
+            command.Parameters.AddWithValue("@Newname", plant.NewName);
+            command.Parameters.AddWithValue("@name", plant.Plant_Id);
+
+            command.ExecuteNonQuery();
+
+            conn.Close();
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine(exception.Message);
+        }
+    }
+
+
     public void DeletePlant(Plant plant)
     {
         try
         {
             MySqlConnection conn = GetOpenConnection();
 
-            string sql = "DELETE FROM plant WHERE name = '@name';";
-
+            string sql = "DELETE FROM plant WHERE name = @name;";
             Console.WriteLine(sql);
             MySqlCommand command = new MySqlCommand(sql, conn);
             command.Parameters.AddWithValue("@name", plant.Name);
+
+            command.ExecuteNonQuery();
+
+            conn.Close();
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine(exception.Message);
+        }
+    }
+
+    public void UpdatePlantName(UpdatePlantName updatePlantName)
+    {
+        try
+        {
+            MySqlConnection conn = GetOpenConnection();
+
+            string sql = "UPDATE plant SET name = @newName WHERE name = @oldName";
+
+
+            Console.WriteLine(sql);
+            MySqlCommand command = new MySqlCommand(sql, conn);
+            command.Parameters.AddWithValue("@oldName", updatePlantName.OldName);
+            command.Parameters.AddWithValue("@NewName", updatePlantName.NewName);
 
             command.ExecuteNonQuery();
 
@@ -168,38 +215,14 @@ public class Database
         {
             MySqlConnection conn = GetOpenConnection();
 
-            string sql = "INSERT INTO staff (forename, surname, dateOfBirth, email) VALUES ('@forename', '@surname', '@surname', '@email');";
-            //string sql = "INSERT INTO staff (forename, surname, dateOfBirth, email) VALUES ('@forename', 'NAME', '1999-05-30', 'H@HOME.COM');";
+            string sql = "INSERT INTO staff (forename, surname, dateOfBirth, email, password) VALUES (@forename, @surname, @dateOfBirth, @email, @password);";
             Console.WriteLine(sql);
             MySqlCommand command = new MySqlCommand(sql, conn);
             command.Parameters.AddWithValue("@forename", staff.Forename);
             command.Parameters.AddWithValue("@surname", staff.Surname);
             command.Parameters.AddWithValue("@dateOfBirth", staff.DateOfBirth);
             command.Parameters.AddWithValue("@email", staff.Email);
-
-            command.ExecuteNonQuery();
-
-            conn.Close();
-        }
-        catch (Exception exception)
-        {
-            Console.WriteLine(exception.Message);
-        }
-    }
-
-    public void UpdateStaffName(UpdateStaffName updateStaffName)
-    {
-        try
-        {
-            MySqlConnection conn = GetOpenConnection();
-
-            string sql = "UPDATE staff SET forename = @newName WHERE name = @oldName";
-
-
-            Console.WriteLine(sql);
-            MySqlCommand command = new MySqlCommand(sql, conn);
-            command.Parameters.AddWithValue("@oldName", updateStaffName.OldName);
-            command.Parameters.AddWithValue("@NewName", updateStaffName.NewName);
+            command.Parameters.AddWithValue("@passowrd", staff.Password);
 
             command.ExecuteNonQuery();
 
@@ -217,8 +240,7 @@ public class Database
         {
             MySqlConnection conn = GetOpenConnection();
 
-            string sql = "DELETE FROM staff WHERE surname = '@surname';";
-
+            string sql = "DELETE FROM staff WHERE surname = @surname;";
             Console.WriteLine(sql);
             MySqlCommand command = new MySqlCommand(sql, conn);
             command.Parameters.AddWithValue("@surname", staff.Surname);

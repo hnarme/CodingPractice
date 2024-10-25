@@ -1,0 +1,22 @@
+@model Plant;
+
+@{
+    ViewData["Title"] = "Newly Created Plant";
+}
+
+<h2>You have added the plant @Model.Name to the list</h2>
+
+<div>
+    <hr />
+    <dl class="container">
+        <div class="col-md-3 agile_grid_right">
+            <p class="fexi_header"><span>Name: </span>@Model.Name</p>
+            <p class="fexi_header_para"><span>Family: </span> @Model.Family </p>
+        </div>
+    </dl>
+</div>
+
+<hr />
+<div>
+    <a asp-controller="Plant" asp-action="Index" class="btn btn-primary">Back</a>
+</div>

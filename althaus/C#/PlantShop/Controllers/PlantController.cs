@@ -21,13 +21,6 @@ public class PlantController : Controller
         return View(Database.Instance.GetAllPlant());
     }
 
-    public ViewResult Display(int id)
-    {
-        Database.Instance.SetConnectionString(_configuration.GetValue<string>("ConnectionString"));
-        Plant idPlant = Database.Instance.GetAllPlant().FirstOrDefault(plant => plant.Plant_Id == id);
-        return View(idPlant);
-    }
-
     public ActionResult Create(Plant plant)
     {
         Database.Instance.SetConnectionString(_configuration.GetValue<string>("ConnectionString"));
@@ -36,9 +29,15 @@ public class PlantController : Controller
 
     public ActionResult CreateResult(Plant plant)
     {
-        Database.Instance.SetConnectionString(_configuration.GetValue<string>("ConnectionString"));
         Database.Instance.AddPlant(plant);
         return View(plant);
+    }
+
+    public ViewResult Display(int id)
+    {
+        Database.Instance.SetConnectionString(_configuration.GetValue<string>("ConnectionString"));
+        Plant idPlant = Database.Instance.GetAllPlant().FirstOrDefault(plant => plant.Plant_Id == id);
+        return View(idPlant);
     }
 
     public ViewResult Edit(int id)
@@ -48,13 +47,25 @@ public class PlantController : Controller
         return View(editPlant);
     }
 
+    public ViewResult EditResult(Plant plant)
+    {
+        Database.Instance.EditPlant(plant);
+        plant.Name = plant.NewName;
+        return View(plant);
+    }
+
     public ViewResult Delete(int id, Plant plant)
     {
         Database.Instance.SetConnectionString(_configuration.GetValue<string>("ConnectionString"));
         Plant deletePlant = Database.Instance.GetAllPlant().FirstOrDefault(plant => plant.Plant_Id == id);
-        Database.Instance.DeletePlant(plant);
 
         return View(deletePlant);
+    }
+
+    public ActionResult DeleteResult(Plant plant)
+    {
+        Database.Instance.DeletePlant(plant);
+        return View(plant);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

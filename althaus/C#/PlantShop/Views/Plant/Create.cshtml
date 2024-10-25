@@ -13,18 +13,18 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Plant_Id" />
             <div class="form-group">
-                <label asp-for="Name" class="control-label">Name:</label>
-                <input name="Name" asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+                <label asp-for="@Model.Name" class="control-label">Name:</label>
+                <input name="Name" asp-for="@Model.Name" class="form-control" />
+                <span asp-validation-for="@Model.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Family" class="control-label">Family:</label>
-                <input name="Family" asp-for="Family" class="form-control" />
-                <span asp-validation-for="Family" class="text-danger"></span>
+                <label asp-for="@Model.Family" class="control-label">Family:</label>
+                <input name="Family" asp-for="@Model.Family" class="form-control" />
+                <span asp-validation-for="@Model.Family" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <input asp-action="Index" type="submit" value="Add plant" class="btn btn-primary" />
+                <input asp-action="CreateResult" type="submit" value="Add plant" class="btn btn-primary" />
                 <a asp-controller="plant" asp-action="Index" class="btn btn-primary">Cancel</a>
             </div>
         </form>

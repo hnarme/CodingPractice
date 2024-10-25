@@ -9,22 +9,22 @@
 
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="EditResult">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Plant_Id" />
+            <input type="hidden" asp-for="@Model.Plant_Id" />
             <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+                <label asp-for="@Model.NewName" class="control-label"></label>
+                <input asp-for="@Model.NewName" class="form-control" />
+                <span asp-validation-for="@Model.NewName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Family" class="control-label"></label>
-                <input asp-for="Family" class="form-control" />
-                <span asp-validation-for="Family" class="text-danger"></span>
+                <label asp-for="@Model.Family" class="control-label"></label>
+                <input asp-for="@Model.Family" class="form-control" />
+                <span asp-validation-for="@Model.Family" class="text-danger"></span>
             </div>
             <hr />
             <div>
-                <input asp-action="Edit" type="submit" value="Save" class="btn btn-primary" />
+                <input asp-action="EditResult" type="submit" value="Save" class="btn btn-primary" />
                 <a asp-controller="Plant" asp-action="Index" class="btn btn-primary">Cancel</a>
             </div>
         </form>

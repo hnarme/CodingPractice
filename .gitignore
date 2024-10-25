@@ -144,14 +144,14 @@ modules.xml
 hs_err_pid*
 
 ### Visual Studio Code ###
-/althaus/C#/PlantShop/bin/
-/althaus/C#/PlantShop/obj/
-/althaus/C#/BookShop/bin/
-/althaus/C#/BookShop/obj/
-/althaus/C#/Databases/bin/
-/althaus/C#/Databases/obj/
-/althaus/C#/DentistApp/bin/
-/althaus/C#/DentistApp/obj/
+althaus/C#/PlantShop/bin/
+althaus/C#/PlantShop/obj/
+althaus/C#/BookShop/bin/
+althaus/C#/BookShop/obj/
+althaus/C#/Databases/bin/
+althaus/C#/Databases/obj/
+althaus/C#/DentistApp/bin/
+althaus/C#/DentistApp/obj/
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -199,3 +199,4 @@ temp_*
 *.csproj.nuget.dgspec.json
 *.csproj.nuget.g.props
 *project.assets.json
+althaus/C#/PlantShop/obj/

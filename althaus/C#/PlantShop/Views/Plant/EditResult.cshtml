@@ -1,0 +1,12 @@
+@model Plant;
+
+@{
+    ViewData["Title"] = "Changed Details";
+}
+
+<h2>You have changed the details for the plant @Model.NewName</h2>
+
+<hr />
+<div>
+    <a asp-controller="Plant" asp-action="Index" class="btn btn-primary">Back</a>
+</div>
