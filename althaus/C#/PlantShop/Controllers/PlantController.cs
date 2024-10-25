@@ -50,7 +50,7 @@ public class PlantController : Controller
     public ViewResult EditResult(Plant plant)
     {
         Database.Instance.EditPlant(plant);
-        plant.Name = plant.NewName;
+        plant.Name = plant.Name;
         return View(plant);
     }
 
