@@ -54,8 +54,9 @@ public class Database
     // Plants SQL Commands
     public List<Plant> GetAllPlant()
     {
-        try
-        {
+        // Comment out try and catch for Database_Test
+        //try
+        //{
             MySqlConnection conn = GetOpenConnection();
 
             string sql = "SELECT * FROM plant;";
@@ -77,10 +78,10 @@ public class Database
             conn.Close();
             return plantList;
         }
-        catch (Exception exception)
-        {
-            return ErrorListPlant(exception.Message);
-        }
+        //catch (Exception exception)
+        //{
+        //    return ErrorListPlant(exception.Message);
+        //}
     }
 
     public void AddPlant(Plant plant)

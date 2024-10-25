@@ -7,13 +7,13 @@ public class Database_Test
     [TestMethod]
     public void CheckDatabaseConnection()
     {
-        List<Plant> plants = Database.Instance.GetAllPlant();
-        if (plants.Count == 0)
-        {
-            Console.WriteLine("Test Failed!");
-            return;
-        }
+        try{
+        Database.Instance.GetAllPlant();
 
-        Console.WriteLine("Test successful!");
+        }
+        catch(Exception ex)
+        {
+            Assert.Fail(ex.Message);
+        }
     }
 }
