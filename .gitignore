@@ -199,4 +199,8 @@ temp_*
 *.csproj.nuget.dgspec.json
 *.csproj.nuget.g.props
 *project.assets.json
-althaus/C#/PlantShop/obj/
+/althaus/C\#/PlantShop/obj
+/althaus/C\#/PlantShop/bin
+/althaus/C\#/PlantShop/obj
+/althaus/C\#/PlantShop/obj
+/althaus/C\#/PlantShop/obj

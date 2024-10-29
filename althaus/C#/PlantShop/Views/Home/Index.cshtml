@@ -11,21 +11,29 @@
     <div class="row justify-content-center">
         <div class="col-5">
             <div class="LoginForm">
-                <form asp-action="Index">
+                <form asp-action="LoginCheck">
                     <!-- Email input -->
-                    <div data-mdb-input-init class="form-outline mb-4">
-                        <input type="email" name="email" class="form-control" />
-                        <label class="form-label" for="email">Email address</label>
+                    <div class="form-group" novalidate>
+                        <label asp-for="@Model.Email" class="control-label">Email:</label>
+                        <input name="@Model.Email" asp-for="@Model.Email" class="form-control" required />
+                        <span asp-validation-for="@Model.Email" class="text-danger"></span>
+                        <div class="invalid-feedback">
+                            Sorry, we can't find an account with this email. Please try again.
+                        </div>
                     </div>
-
                     <!-- Password input -->
-                    <div data-mdb-input-init class="form-outline mb-4">
-                        <input type="password" name="password" class="form-control" />
-                        <label class="form-label" for="password">Password</label>
+                    <div class="form-group">
+                        <label asp-for="@Model.Password" class="control-label">Password:</label>
+                        <input type="password" name="@Model.Password" asp-for="@Model.Password" class="form-control"
+                            required />
+                        <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                        <div class="invalid-feedback">
+                            Sorry, we can't find an account with this password. Please try again.
+                        </div>
                     </div>
-
                     <!-- Submit button -->
-                    <input asp-action="Index" type="submit" value="Sign in" class="btn btn-primary btn-block mb-4" />
+                    <input type="submit" value="Sign in" class="btn btn-primary" />
+
                 </form>
             </div>
         </div>

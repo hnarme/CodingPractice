@@ -23,10 +23,11 @@ public class Database
         staffIdString = message;
         staff.Forename = message;
         staff.Surname = message;
-        DateOnly staffDOB = new DateOnly(staff.DateOfBirth.Year, staff.DateOfBirth.Month, staff.DateOfBirth.Day);
-        string staffDatOBError = staffDOB.ToString();
-        staffDatOBError = message;
+        //DateOnly staffDOB = new DateOnly(staff.DateOfBirth.Year, staff.DateOfBirth.Month, staff.DateOfBirth.Day);
+        //string staffDatOBError = staffDOB.ToString();
+        //staffDatOBError = message;
         staff.Email = message;
+        staff.Password = message;
         return new List<Staff>() { staff };
     }
 
@@ -112,12 +113,12 @@ public class Database
         {
             MySqlConnection conn = GetOpenConnection();
 
-            string sql = "UPDATE plant SET name = @Newname WHERE plant_id = @plant_id;";
+            string sql = "UPDATE plant SET name = @name, family = @family WHERE plant_id = @plant_id;";
             Console.WriteLine(sql);
             MySqlCommand command = new MySqlCommand(sql, conn);
-            command.Parameters.AddWithValue("@Newname", plant.Name);
-            command.Parameters.AddWithValue("@name", plant.Plant_Id);
-
+            command.Parameters.AddWithValue("@name", plant.Name);
+            command.Parameters.AddWithValue("@family", plant.Family);
+            command.Parameters.AddWithValue("@Plant_Id", plant.Plant_Id);
             command.ExecuteNonQuery();
 
             conn.Close();
@@ -195,10 +196,10 @@ public class Database
                 staff.Staff_Id = int.Parse(staffID);
                 staff.Forename = reader[1].ToString();
                 staff.Surname = reader[2].ToString();
-                staff.DateOfBirth = new DateOnly(staff.DateOfBirth.Year, staff.DateOfBirth.Month, staff.DateOfBirth.Day);
-                string staffDOB = staff.DateOfBirth.ToString();
-                staffDOB = reader[3].ToString();
-                staff.Email = reader[4].ToString();
+                //string staffDOB = staff.DateOfBirth.ToString();
+                //staffDOB = reader[3].ToString();
+                staff.Email = reader[3].ToString();
+                staff.Password = reader[4].ToString();
                 staffList.Add(staff);
             }
             reader.Close();
@@ -217,14 +218,40 @@ public class Database
         {
             MySqlConnection conn = GetOpenConnection();
 
-            string sql = "INSERT INTO staff (forename, surname, dateOfBirth, email, password) VALUES (@forename, @surname, @dateOfBirth, @email, @password);";
+            string sql = "INSERT INTO staff (forename, surname, email, password) VALUES (@forename, @surname, @email, @password);";
             Console.WriteLine(sql);
             MySqlCommand command = new MySqlCommand(sql, conn);
             command.Parameters.AddWithValue("@forename", staff.Forename);
             command.Parameters.AddWithValue("@surname", staff.Surname);
-            command.Parameters.AddWithValue("@dateOfBirth", staff.DateOfBirth);
+            //command.Parameters.AddWithValue("@dateOfBirth", staff.DateOfBirth);
             command.Parameters.AddWithValue("@email", staff.Email);
             command.Parameters.AddWithValue("@passowrd", staff.Password);
+
+            command.ExecuteNonQuery();
+
+            conn.Close();
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine(exception.Message);
+        }
+    }
+
+    public void EditStaff(Staff staff)
+    {
+        try
+        {
+            MySqlConnection conn = GetOpenConnection();
+
+            string sql = "UPDATE staff SET forename = @forename, surname = @surname, email = @email, password = @password WHERE staff_id = @staff_id;";
+            Console.WriteLine(sql);
+            MySqlCommand command = new MySqlCommand(sql, conn);
+            command.Parameters.AddWithValue("@forename", staff.Forename);
+            command.Parameters.AddWithValue("@surname", staff.Surname);
+            //command.Parameters.AddWithValue("@dateOfBirth", staff.DateOfBirth);
+            command.Parameters.AddWithValue("@email", staff.Email);
+            command.Parameters.AddWithValue("@password", staff.Password);
+            command.Parameters.AddWithValue("@staff_id", staff.Staff_Id);
 
             command.ExecuteNonQuery();
 
@@ -242,9 +269,10 @@ public class Database
         {
             MySqlConnection conn = GetOpenConnection();
 
-            string sql = "DELETE FROM staff WHERE surname = @surname;";
+            string sql = "DELETE FROM staff WHERE forename = @forename AND surname = @surname;";
             Console.WriteLine(sql);
             MySqlCommand command = new MySqlCommand(sql, conn);
+            command.Parameters.AddWithValue("@forename", staff.Forename);
             command.Parameters.AddWithValue("@surname", staff.Surname);
 
             command.ExecuteNonQuery();

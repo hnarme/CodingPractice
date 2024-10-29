@@ -1,0 +1,12 @@
+@model Staff;
+
+@{
+    ViewData["Title"] = "Changed Details";
+}
+
+<h2>You have changed the details for @Model.Forename @Model.Surname</h2>
+
+<hr />
+<div>
+    <a asp-controller="Staff" asp-action="Index" class="btn btn-primary">Back</a>
+</div>

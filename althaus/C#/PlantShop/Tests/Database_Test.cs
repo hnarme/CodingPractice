@@ -29,14 +29,14 @@ public class Database_Test
     public void AddGetAndDeletePlantOnDatabase()
     {
         Plant plant = new Plant();
-        plant.Name = "TEST";
-        plant.Family = "TEST";
+        plant.Name = "TESTs";
+        plant.Family = "TESTs";
         Database.Instance.AddPlant(plant);
         List<Plant> plants = Database.Instance.GetAllPlant();
         bool found = false;
         foreach (Plant p in plants)
         {
-            if (p.Name == "TEST" && p.Family == "TEST")
+            if (p.Name == "TESTs" && p.Family == "TESTs")
             {
                 found = true;
             }

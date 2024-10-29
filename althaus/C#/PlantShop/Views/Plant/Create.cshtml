@@ -22,7 +22,6 @@
                 <input name="Family" asp-for="@Model.Family" class="form-control" />
                 <span asp-validation-for="@Model.Family" class="text-danger"></span>
             </div>
-
             <div class="form-group">
                 <input asp-action="CreateResult" type="submit" value="Add plant" class="btn btn-primary" />
                 <a asp-controller="plant" asp-action="Index" class="btn btn-primary">Cancel</a>
