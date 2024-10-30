@@ -12,7 +12,6 @@ public class HomeController : Controller
     {
         _logger = logger;
         _configuration = configuration;
-
     }
 
     public IActionResult Index(Staff staff)
@@ -74,11 +73,6 @@ public class HomeController : Controller
         }
 
         //return RedirectToAction("Index", "Staff");
-    }
-
-    public IActionResult AccountType(Staff staff)
-    {
-        return View();
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
