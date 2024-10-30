@@ -11,37 +11,36 @@
     <div class="col-md-4">
         <form asp-action="CreateResult">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Staff_Id">
+            <input type="hidden" asp-for="Staff_Id" />
             <div class="form-group">
                 <label asp-for="@Model.Forename" class="control-label">Forename:</label>
-                <input name="Forename" asp-for="@Model.Forename" class="form-control">
+                <input name="Forename" asp-for="@Model.Forename" class="form-control" />
                 <span asp-validation-for="@Model.Forename" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="@Model.Surname" class="control-label">Surname:</label>
-                <input name="Surname" asp-for="@Model.Surname" class="form-control">
+                <input name="Surname" asp-for="@Model.Surname" class="form-control" />
                 <span asp-validation-for="@Model.Surname" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="@Model.Email" class="control-label">Staff Email:</label>
-                <input name="Email" value="YourName@greenplant.com" asp-for="@Model.Email" class="form-control">
+                <input name="Email" value="YourName@greenplant.com" asp-for="@Model.Email" class="form-control" />
                 <span asp-validation-for="@Model.Email" class="text-danger"></span>
                 <small id="emailHelp" class="form-text text-muted">Please type in email according to the company
                     standard email format. *YourName@greenplant.com*</small>
             </div>
             <div class="form-group">
                 <label asp-for="@Model.Password" class="control-label">Password:</label>
-                <input name="@Model.Password" value="password" asp-for="@Model.Password" class="form-control" readonly>
+                <input name="Password" value="password" asp-for="@Model.Password" class="form-control" readonly />
                 <span asp-validation-for="@Model.Password" class="text-danger"></span>
             </div> <small id="emailHelp" class="form-text text-muted">All newly registered staff get a default password
                 and must change it immediately!</small>
             <div class="form-group">
-                <input type="submit" value="Register Staff" class="btn btn-primary">
+                <input type="submit" value="Register Staff" class="btn btn-primary" />
                 <a asp-controller="Staff" asp-action="Index" class="btn btn-primary">Cancel</a>
             </div>
         </form>
     </div>
-</div>
 </div>
 <hr />
 <div>

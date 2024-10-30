@@ -255,6 +255,9 @@ VALUES (
  separator
  */
 -- @block
+INSERT INTO staff (forename, surname, email, password)
+VALUES ('@forename', '@surname', '@email', '@password');
+-- @block
 INSERT INTO plantshop.staff (forename, surname, email, password)
 VALUES (
         'Test',
