@@ -225,7 +225,7 @@ public class Database
             command.Parameters.AddWithValue("@surname", staff.Surname);
             //command.Parameters.AddWithValue("@dateOfBirth", staff.DateOfBirth);
             command.Parameters.AddWithValue("@email", staff.Email);
-            command.Parameters.AddWithValue("@passowrd", staff.Password);
+            command.Parameters.AddWithValue("@password", staff.Password);
 
             command.ExecuteNonQuery();
 
