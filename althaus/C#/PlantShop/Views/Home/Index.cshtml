@@ -18,11 +18,11 @@
     <div class="row justify-content-center">
         <div class="col-5">
             <div class="LoginForm">
-                <form asp-action="LoginCheck">
+                <form asp-action="Index">
                     <!-- Email input -->
                     <div class="form-group" novalidate>
                         <label asp-for="@Model.Email" class="control-label">Email:</label>
-                        <input name="@Model.Email" asp-for="@Model.Email" class="form-control" required />
+                        <input name="Email" asp-for="@Model.Email" class="form-control" required />
                         <span asp-validation-for="@Model.Email" class="text-danger"></span>
                         <div class="invalid-feedback">
                             Sorry, we can't find an account with this email. Please try again.
@@ -31,7 +31,7 @@
                     <!-- Password input -->
                     <div class="form-group">
                         <label asp-for="@Model.Password" class="control-label">Password:</label>
-                        <input type="password" name="@Model.Password" asp-for="@Model.Password" class="form-control"
+                        <input type="password" name="Password" asp-for="@Model.Password" class="form-control"
                             required />
                         <span asp-validation-for="@Model.Password" class="text-danger"></span>
                         <div class="invalid-feedback">

@@ -149,6 +149,12 @@ VALUES (
         'Joseph',
         'rosyjoseph@greenplant.com',
         'password'
+    ),
+    (
+        'Hope',
+        'Powell',
+        'hopepowell@greenplant.com',
+        'password'
     );
 /*
  separator
@@ -232,6 +238,13 @@ VALUES (
  '2002-8-27',
  'rosyjoseph@greenplant.com',
  'password'
+ ), 
+ (
+ 'Hope',
+ 'Powell',
+ '1997-8-27',
+ 'hopepowell@greenplant.com',
+ 'password'
  );
  */
 /*
@@ -314,6 +327,22 @@ ALTER TABLE plantshop.staff DROP COLUMN dateOfBirth;
  */
 -- @block
 DROP Table plantshop.staff;
+/*
+ separator
+ */
+-- @block
+ALTER TABLE plantshop.staff
+ADD role varchar(10);
+-- @block
+UPDATE plantshop.staff
+SET role = 'standard';
+/*
+ separator
+ */
+-- @block
+UPDATE plantshop.staff
+SET role = 'manager'
+WHERE forename = 'Cliff';
 /*
  separator
  */

@@ -36,6 +36,16 @@
             </div> <small id="emailHelp" class="form-text text-muted">All newly registered staff get a default password
                 and must change it immediately!</small>
             <div class="form-group">
+                <label asp-for="@Model.Surname" class="control-label">Surname:</label>
+                <input name="Surname" asp-for="@Model.Surname" class="form-control" />
+                <span asp-validation-for="@Model.Surname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Role" class="control-label">Role:</label>
+                <input name="Role" asp-for="@Model.Role" class="form-control" />
+                <span asp-validation-for="@Model.Role" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Register Staff" class="btn btn-primary" />
                 <a asp-controller="Staff" asp-action="Index" class="btn btn-primary">Cancel</a>
             </div>

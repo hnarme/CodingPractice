@@ -17,62 +17,25 @@ public class HomeController : Controller
     public IActionResult Index(Staff staff)
     {
         Database.Instance.SetConnectionString(_configuration.GetValue<string>("ConnectionString"));
+        List<Staff> allStaff = Database.Instance.GetAllStaff();
+
+        foreach (Staff staffDetails in allStaff)
+        {
+            if (staffDetails.Email == staff.Email && staffDetails.Password == staff.Password)
+            {
+                if (staffDetails.Role == "manager")
+                {
+                    return RedirectToAction("Index", "Staff");
+                }
+
+                if (staffDetails.Role == "standard")
+                {
+                    return RedirectToAction("Index", "Plant");
+                }
+            }
+        }
+
         return View(staff);
-    }
-
-    public IActionResult LoginCheck(Staff staff, string email, string password)
-    {
-        Database.Instance.SetConnectionString(_configuration.GetValue<string>("ConnectionString"));
-        Staff emailStaff = Database.Instance.GetAllStaff().FirstOrDefault(staff => staff.Email == email);
-        Staff passwordStaff = Database.Instance.GetAllStaff().FirstOrDefault(staff => staff.Password == password);
-
-        if (staff.Email == emailStaff.ToString() && staff.Password == passwordStaff.ToString())
-        {
-            Debug.WriteLine("email and password match"); //return RedirectToAction("Index", "Staff");
-            Debug.WriteLine("" + staff.Email + "" + staff.Password);
-        }
-        else
-        {
-            Debug.WriteLine("Failed find match"); //return View(Index);
-        }
-        return RedirectToAction("Index", "Home");
-    }
-
-
-    public IActionResult AccountManager(Staff staff, string email, string password)
-    {
-        Database.Instance.SetConnectionString(_configuration.GetValue<string>("ConnectionString"));
-        Staff emailStaff = Database.Instance.GetAllStaff().FirstOrDefault(staff => staff.Email == email);
-        Staff passwordStaff = Database.Instance.GetAllStaff().FirstOrDefault(staff => staff.Password == password);
-
-        if (staff.Email != email && staff.Password != password)
-        {
-            return View(Error());
-        }
-        else
-        {
-            return View(staff);
-        }
-
-        //return RedirectToAction("Index", "Staff");
-    }
-
-    public IActionResult AccountRegular(Staff staff, string email, string password)
-    {
-        Database.Instance.SetConnectionString(_configuration.GetValue<string>("ConnectionString"));
-        Staff emailStaff = Database.Instance.GetAllStaff().FirstOrDefault(staff => staff.Email == email);
-        Staff passwordStaff = Database.Instance.GetAllStaff().FirstOrDefault(staff => staff.Password == password);
-
-        if (staff.Email != email && staff.Password != password)
-        {
-            return View(Error());
-        }
-        else
-        {
-            return View(staff);
-        }
-
-        //return RedirectToAction("Index", "Staff");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

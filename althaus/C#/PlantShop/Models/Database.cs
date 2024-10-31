@@ -1,3 +1,5 @@
+using System.Data.SqlTypes;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using MySql.Data.MySqlClient;
 using PlantShop.Models;
@@ -28,6 +30,7 @@ public class Database
         //staffDatOBError = message;
         staff.Email = message;
         staff.Password = message;
+        staff.Role = message;
         return new List<Staff>() { staff };
     }
 
@@ -129,7 +132,6 @@ public class Database
         }
     }
 
-
     public void DeletePlant(Plant plant)
     {
         try
@@ -200,6 +202,7 @@ public class Database
                 //staffDOB = reader[3].ToString();
                 staff.Email = reader[3].ToString();
                 staff.Password = reader[4].ToString();
+                staff.Role = reader[5].ToString();
                 staffList.Add(staff);
             }
             reader.Close();
@@ -218,7 +221,7 @@ public class Database
         {
             MySqlConnection conn = GetOpenConnection();
 
-            string sql = "INSERT INTO staff (forename, surname, email, password) VALUES (@forename, @surname, @email, @password);";
+            string sql = "INSERT INTO staff (forename, surname, email, password, role) VALUES (@forename, @surname, @email, @password, @role);";
             Console.WriteLine(sql);
             MySqlCommand command = new MySqlCommand(sql, conn);
             command.Parameters.AddWithValue("@forename", staff.Forename);
@@ -226,6 +229,7 @@ public class Database
             //command.Parameters.AddWithValue("@dateOfBirth", staff.DateOfBirth);
             command.Parameters.AddWithValue("@email", staff.Email);
             command.Parameters.AddWithValue("@password", staff.Password);
+            command.Parameters.AddWithValue("@role", staff.Role);
 
             command.ExecuteNonQuery();
 
@@ -243,7 +247,7 @@ public class Database
         {
             MySqlConnection conn = GetOpenConnection();
 
-            string sql = "UPDATE staff SET forename = @forename, surname = @surname, email = @email, password = @password WHERE staff_id = @staff_id;";
+            string sql = "UPDATE staff SET forename = @forename, surname = @surname, email = @email, password = @password, role = @role WHERE staff_id = @staff_id;";
             Console.WriteLine(sql);
             MySqlCommand command = new MySqlCommand(sql, conn);
             command.Parameters.AddWithValue("@forename", staff.Forename);
@@ -252,6 +256,7 @@ public class Database
             command.Parameters.AddWithValue("@email", staff.Email);
             command.Parameters.AddWithValue("@password", staff.Password);
             command.Parameters.AddWithValue("@staff_id", staff.Staff_Id);
+            command.Parameters.AddWithValue("@role", staff.Role);
 
             command.ExecuteNonQuery();
 

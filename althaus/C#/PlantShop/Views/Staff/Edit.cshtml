@@ -32,7 +32,11 @@
                 <input asp-for="@Model.Password" class="form-control" />
                 <span asp-validation-for="@Model.Password" class="text-danger"></span>
             </div>
-
+            <div class="form-group">
+                <label asp-for="@Model.Role" class="control-label">Role:</label>
+                <input name="Role" asp-for="@Model.Role" class="form-control" />
+                <span asp-validation-for="@Model.Role" class="text-danger"></span>
+            </div>
             <hr />
             <div>
                 <input type="submit" value="Save" class="btn btn-primary" />
