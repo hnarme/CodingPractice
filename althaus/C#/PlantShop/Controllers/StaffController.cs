@@ -30,8 +30,7 @@ public class StaffController : Controller
 
     public ActionResult CreateResult(Staff staff)
     {
-        Debug.WriteLine(staff.Forename + ", " + staff.Surname + ", " + staff.Email + ", " + staff.Password);
-        staff.Password = "password";
+        //staff.Password = "password";
         Database.Instance.AddStaff(staff);
         return View(staff);
     }
