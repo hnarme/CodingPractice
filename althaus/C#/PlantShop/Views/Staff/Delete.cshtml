@@ -1,11 +1,12 @@
 @model Staff;
-
+<!-- This view's title -->
 @{
     ViewData["Title"] = "Delete Staff";
 }
-
+<!-- This view's heading -->
 <h2>Remove @Model.Forename @Model.Surname from the system</h2>
 
+<!-- Alert to show what is being deleted -->
 <div>
     <hr />
     <div class="alert alert-danger">
@@ -19,12 +20,15 @@
     </dl>
 </div>
 <hr />
+<!-- Delete form -->
 <div class="row">
     <div class="col-md-4">
+        <!-- Alert to ask for deletion input -->
         <div class="alert alert-danger">
             Retype the forename and surname to confirm.
         </div>
         <form asp-action="DeleteResult">
+            <!-- delete confirmation inputs -->
             <div class="form-group">
                 <div>
                     <label asp-for="@Model.Forename" class="control-label"></label>
@@ -37,6 +41,7 @@
                     <span asp-validation-for="@Model.Surname" class="text-danger"></span>
                 </div>
                 <hr />
+                <!-- Submit and cancel button -->
                 <div>
                     <input type="submit" value="Delete" class="btn btn-primary" />
                     <a asp-controller="Staff" asp-action="Index" class="btn btn-primary">Cancel</a>

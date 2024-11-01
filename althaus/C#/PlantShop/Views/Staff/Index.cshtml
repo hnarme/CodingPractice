@@ -1,17 +1,17 @@
 ﻿@model List<Staff>;
-
+<!-- Title for this view -->
 @{
     ViewData["Title"] = "Staff List";
 }
 <h1>Staff List</h1>
 <hr />
-
+<!-- Add new staff button -->
 <div class="btn-group-top">
     <a asp-controller="Staff" asp-action="Create" class="btn btn-primary float-end">
         Register New Staff
     </a>
 </div>
-
+<!-- Database list table -->
 <div class="page-container">
     <div class="table-responsive">
         <div class="scrollable">

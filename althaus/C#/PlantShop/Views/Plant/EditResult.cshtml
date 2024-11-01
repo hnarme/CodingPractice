@@ -1,11 +1,13 @@
 @model Plant;
-
+<!-- Title for this view -->
 @{
     ViewData["Title"] = "Changed Details";
 }
 
+<!-- View heading -->
 <h2>Details changed successfully!</h2>
 
+<!-- Results from add form input -->
 <div>
     <hr />
     <dl class="container">
@@ -18,7 +20,7 @@
         </div>
     </dl>
 </div>
-
+<!-- Back button to index view -->
 <hr />
 <div>
     <a asp-controller="Plant" asp-action="Index" class="btn btn-primary">Back</a>

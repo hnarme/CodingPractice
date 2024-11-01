@@ -14,6 +14,7 @@ public class HomeController : Controller
         _configuration = configuration;
     }
 
+    // Shows view depending on staff's role
     public IActionResult Index(Staff staff)
     {
         Database.Instance.SetConnectionString(_configuration.GetValue<string>("ConnectionString"));

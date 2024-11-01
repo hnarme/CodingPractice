@@ -1,17 +1,18 @@
 ﻿@model List<Plant>;
-
+<!-- Title for this view -->
 @{
     ViewData["Title"] = "Plant List";
 }
 <h1>Plant List</h1>
 <hr />
 
+<!-- Add new plants button -->
 <div class="btn-group-top">
     <a asp-controller="Plant" asp-action="Create" class="btn btn-primary float-end">
         Add New Plants
     </a>
 </div>
-
+<!-- Database list table -->
 <div class="page-container">
     <div class="table-responsive">
         <div class="scrollable">
@@ -64,7 +65,7 @@
         </div>
     </div>
 </div>
-
+<!-- Links for other options -->
 <div class="btn-group-btm">
     <div class="btn-group" role="group">
         <a asp-controller="Plant" asp-action="Index" class="btn btn-default">Show All</a>

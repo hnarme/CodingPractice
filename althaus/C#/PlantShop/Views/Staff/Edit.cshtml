@@ -1,12 +1,12 @@
 @model Staff;
-
+<!-- This view's title -->
 @{
     ViewData["Title"] = "Edit Staff";
 }
-
+<!-- This view's heading -->
 <h2>@Model.Forename @Model.Surname's Details</h2>
 <hr />
-
+<!-- Editing staff details form -->
 <div class="row">
     <div class="col-md-4">
         <form asp-action="EditResult">
