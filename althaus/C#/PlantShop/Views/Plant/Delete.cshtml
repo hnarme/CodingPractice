@@ -1,11 +1,12 @@
 @model Plant;
-
+<!-- Title for view -->
 @{
     ViewData["Title"] = "Delete Plant";
 }
-
+<!-- Heading for this view -->
 <h2>Remove @Model.Name from the system</h2>
 
+<!-- Alert to show what is being deleted -->
 <div>
     <hr />
     <div class="alert alert-danger">
@@ -20,15 +21,17 @@
         </div>
     </dl>
 </div>
-
+<!-- Delete form -->
 <div class="row">
     <div class="col-md-4">
         <form asp-action="DeleteResult">
             <hr />
+            <!-- Alert to ask for deletion input -->
             <div class="alert alert-danger">
                 Retype the plants name and family to confirm.
             </div>
             <div>
+                <!-- Delete form -->
                 <div class="form-group">
                     <label asp-for="@Model.Name" class="control-label"></label>
                     <input asp-for="@Model.Name" class="form-control" />
@@ -40,6 +43,7 @@
                     <span asp-validation-for="@Model.Family" class="text-danger"></span>
                 </div>
                 <hr />
+                <!-- Submit and cancel button -->
                 <div>
                     <input asp-action="DeleteResult" type="submit" value="Delete" class="btn btn-primary" />
                     <a asp-controller="plant" asp-action="Index" class="btn btn-primary">Cancel</a>

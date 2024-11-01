@@ -1,16 +1,17 @@
 @model Plant;
-
+<!-- This view's title -->
 @{
     ViewData["Title"] = "Edit Plant";
 }
 
+<!-- This view's heading -->
 <h2>@Model.Name's Details</h2>
 <hr />
-
+<!-- Editing a plant form -->
 <div class="row">
     <div class="col-md-4">
         <form asp-action="EditResult">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <!-- Hides Id feild for the Plant_ID as it autoincrements -->
             <input type="hidden" asp-for="@Model.Plant_Id" />
             <div class="form-group">
                 <label asp-for="@Model.Name" class="control-label"></label>

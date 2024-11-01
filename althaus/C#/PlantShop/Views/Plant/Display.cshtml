@@ -1,11 +1,12 @@
 @model Plant;
-
+<!-- Title for this view -->
 @{
     ViewData["Title"] = "Plant Page";
 }
-
+<!-- View heading -->
 <h2>@Model.Name's Details</h2>
 
+<!-- Singular plant details page -->
 <div>
     <hr />
     <dl class="container">
@@ -17,7 +18,7 @@
         </div>
     </dl>
 </div>
-
+<!-- Back button to index view -->
 <hr />
 <div>
     <a asp-controller="Plant" asp-action="Index" class="btn btn-primary">Back</a>

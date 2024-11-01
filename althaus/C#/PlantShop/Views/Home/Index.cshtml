@@ -1,12 +1,16 @@
 ﻿@model Staff;
+
+<!-- This view's title -->
 @{
     ViewData["Title"] = "Login Page";
 }
 
+<!-- Welcome heading -->
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
 </div>
 
+<!-- Company Logo Img -->
 <div class="container">
     <div class="row justify-content-center">
         <img src="https://img.freepik.com/premium-vector/eco-friendly-green-plant-logo_658271-8323.jpg?semt=ais_hybrid"
@@ -14,6 +18,7 @@
     </div>
 </div>
 
+<!-- Login form -->
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-5">
@@ -31,9 +36,8 @@
                             required />
                     </div>
                     <hr />
-
+                    <!-- Submit button -->
                     <div class="row justify-content-center">
-                        <!-- Submit button -->
                         <input type="submit" value="Sign in" class="btn btn-primary" id="loginbutton" />
                     </div>
                 </form>
