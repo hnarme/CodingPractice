@@ -12,6 +12,7 @@
 <!-- Adding a plant form -->
 <div class="row">
     <div class="col-md-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <form asp-action="CreateResult">
             <!-- Hides Id feild for the Plant_ID as it autoincrements -->
             <input type="hidden" asp-for="Plant_Id" />
@@ -42,3 +43,9 @@
         </form>
     </div>
 </div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
