@@ -23,7 +23,7 @@
                     <div class="form-group" novalidate>
                         <label asp-for="@Model.Email" class="control-label">Email:</label>
                         <input name="Email" asp-for="@Model.Email" class="form-control" required />
-                        <span asp-validation-for="@Model.Email" class="text-danger"></span>
+                        <span class="text-danger"></span>
                         <div class="invalid-feedback">
                             Sorry, we can't find an account with this email. Please try again.
                         </div>
@@ -33,14 +33,17 @@
                         <label asp-for="@Model.Password" class="control-label">Password:</label>
                         <input type="password" name="Password" asp-for="@Model.Password" class="form-control"
                             required />
-                        <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                        <span class="text-danger"></span>
                         <div class="invalid-feedback">
                             Sorry, we can't find an account with this password. Please try again.
                         </div>
                     </div>
-                    <!-- Submit button -->
-                    <input type="submit" value="Sign in" class="btn btn-primary" />
+                    <hr />
 
+                    <div class="row justify-content-center">
+                        <!-- Submit button -->
+                        <input type="submit" value="Sign in" class="btn btn-primary" id="loginbutton" />
+                    </div>
                 </form>
             </div>
         </div>

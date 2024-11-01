@@ -5,7 +5,6 @@
 }
 
 <h2>Remove @Model.Forename @Model.Surname from the system</h2>
-<hr />
 
 <div>
     <hr />
@@ -37,12 +36,12 @@
                     <input asp-for="@Model.Surname" class="form-control" />
                     <span asp-validation-for="@Model.Surname" class="text-danger"></span>
                 </div>
-                <input type="submit" value="Delete" class="btn btn-primary" />
+                <hr />
+                <div>
+                    <input type="submit" value="Delete" class="btn btn-primary" />
+                    <a asp-controller="Staff" asp-action="Index" class="btn btn-primary">Cancel</a>
+                </div>
             </div>
         </form>
     </div>
-</div>
-<hr />
-<div>
-    <a asp-controller="Staff" asp-action="Index" class="btn btn-primary">Cancel</a>
 </div>

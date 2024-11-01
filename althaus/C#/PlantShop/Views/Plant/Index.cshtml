@@ -14,47 +14,49 @@
 
 <div class="page-container">
     <div class="table-responsive">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Plant Id</th>
-                    <th>Name</th>
-                    <th>Family</th>
-                    <th style="width: 1px;"></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (Plant plants in Model)
-                {
+        <div class="scrollable">
+            <table class="table table-striped">
+                <thead>
                     <tr>
-                        <td>
-                            @plants.Plant_Id
-                        </td>
-                        <td>
-                            @plants.Name
-                        </td>
-                        <td>
-                            @plants.Family
-                        </td>
-                        <td>
-                            <div class="dropdown">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown"
-                                    aria-expanded="false" id="btnToggleActions">
-                                    More Options
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="btnToggleActions">
-                                    <li><a asp-controller="Plant" asp-action="Display" asp-route-id="@plants.Plant_Id"
-                                            class="dropdown-item">Display</a></li>
-                                    <li><a asp-controller="Plant" asp-action="Edit" asp-route-id="@plants.Plant_Id"
-                                            class="dropdown-item">Edit</a></li>
-                                    <li><a asp-controller="Plant" asp-action="Delete" asp-route-id="@plants.Plant_Id"
-                                            class="dropdown-item">Delete</a></li>
-                                </ul>
-                            </div>
-                        </td>
+                        <th>Plant Id</th>
+                        <th>Name</th>
+                        <th>Family</th>
+                        <th style="width: 1px;"></th>
                     </tr>
-                }
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach (Plant plants in Model)
+                    {
+                        <tr>
+                            <td>
+                                @plants.Plant_Id
+                            </td>
+                            <td>
+                                @plants.Name
+                            </td>
+                            <td>
+                                @plants.Family
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown"
+                                        aria-expanded="false" id="btnToggleActions">
+                                        More Options
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="btnToggleActions">
+                                        <li><a asp-controller="Plant" asp-action="Display" asp-route-id="@plants.Plant_Id"
+                                                class="dropdown-item">Display</a></li>
+                                        <li><a asp-controller="Plant" asp-action="Edit" asp-route-id="@plants.Plant_Id"
+                                                class="dropdown-item">Edit</a></li>
+                                        <li><a asp-controller="Plant" asp-action="Delete" asp-route-id="@plants.Plant_Id"
+                                                class="dropdown-item">Delete</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

@@ -25,7 +25,7 @@
         <form asp-action="DeleteResult">
             <hr />
             <div class="alert alert-danger">
-                Retype the plants name to confirm.
+                Retype the plants name and family to confirm.
             </div>
             <div>
                 <div class="form-group">
@@ -38,8 +38,11 @@
                     <input asp-for="@Model.Family" class="form-control" />
                     <span asp-validation-for="@Model.Family" class="text-danger"></span>
                 </div>
-                <input asp-action="DeleteResult" type="submit" value="Delete" class="btn btn-primary" />
-                <a asp-controller="plant" asp-action="Index" class="btn btn-primary">Cancel</a>
+                <hr />
+                <div>
+                    <input asp-action="DeleteResult" type="submit" value="Delete" class="btn btn-primary" />
+                    <a asp-controller="plant" asp-action="Index" class="btn btn-primary">Cancel</a>
+                </div>
             </div>
         </form>
     </div>

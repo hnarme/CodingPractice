@@ -67,6 +67,7 @@ WHERE plant_id = 14;
  separator
  */
 -- @block
+DROP Table plantshop.plant;
 ---
 ---
 ---
@@ -77,84 +78,97 @@ CREATE TABLE plantshop.staff(
     forename VARCHAR(255) NOT NULL,
     surname VARCHAR(255) NOT NULL,
     email VARCHAR(50) NOT NULL,
-    password VARCHAR(50) NOT NULL
+    password VARCHAR(50) NOT NULL,
+    role varchar(10)
 );
 /*
  separator
  */
 -- @block
-INSERT INTO plantshop.staff (forename, surname, email, password)
+INSERT INTO plantshop.staff (forename, surname, email, password, role)
 VALUES (
         'Cliff',
         'Boothman',
         'cliffboothman@greenplant.com',
-        'password'
+        'password',
+        'manager'
     ),
     (
         'Constantin',
         'Chevalier',
         'constchevalier@greenplant.com',
-        'password'
+        'password',
+        'standard'
     ),
     (
         'Sascha',
         'Ritter',
         'sascharitter@greenplant.com',
-        'password'
+        'password',
+        'standard'
     ),
     (
         'Leonidas',
         'Xanthopoulos',
         'leonidasxantho@greenplant.com',
-        'password'
+        'password',
+        'standard'
     ),
     (
         'Javon',
         'Davis',
         'javondavis@greenplant.com',
-        'password'
+        'password',
+        'standard'
     ),
     (
         'Nevan',
         'Higgins',
         'nevanhiggins@greenplant.com',
-        'password'
+        'password',
+        'standard'
     ),
     (
         'Asami',
         'Sugimoto',
         'asamisugi@greenplant.com',
-        'password'
+        'password',
+        'standard'
     ),
     (
         'Sung-Hyun',
         'Yoon',
         'sunghyunyoon@greenplant.com',
-        'password'
+        'password',
+        'standard'
     ),
     (
         'Neusa',
         'Costa',
         'neusacosta@greenplant.com',
-        'password'
+        'password',
+        'standard'
     ),
     (
         'Kulap',
         'Wattana',
         'kulapwattana@greenplant.com',
-        'password'
+        'password',
+        'standard'
     ),
     (
         'Rosy',
         'Joseph',
         'rosyjoseph@greenplant.com',
-        'password'
+        'thisisabadpassword',
+        'standard'
     ),
     (
         'Hope',
         'Powell',
         'hopepowell@greenplant.com',
-        'password'
+        'password',
+        'manager'
     );
 /*
  separator

@@ -4,7 +4,18 @@
     ViewData["Title"] = "Changed Details";
 }
 
-<h2>You have changed the details for the plant @Model.Name with the family name @Model.Family</h2>
+<h2>Details changed successfully!</h2>
+
+<div>
+    <hr />
+    <dl class="container">
+        <div class="col-md-3 agile_grid_right">
+            <p class="fexi_header"><span>You have changed the details for the plant:</span></p>
+            <p class="fexi_header"><span>Name: </span>@Model.Name</p>
+            <p class="fexi_header_para"><span>Family: </span> @Model.Family </p>
+        </div>
+    </dl>
+</div>
 
 <hr />
 <div>

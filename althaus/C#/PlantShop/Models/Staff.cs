@@ -18,9 +18,9 @@ public class Staff()
     //Restore when add entry works
     //public DateOnly DateOfBirth { get; set; }
 
-    [RegularExpression("^[a-z]+@(?!greenplant.com)$", ErrorMessage = "Make sure the email is according to the company standard format *yourname@greenplant.com*. The email cannot have a capital letter in it.")]
+    [RegularExpression("^[a-z]+(@greenplant.com)$", ErrorMessage = "Make sure the email is according to the company standard format *yourname@greenplant.com*. The email cannot have a capital letter in it.")]
     [Required]
-    [StringLength(50, MinimumLength = 15)]
+    [StringLength(50, MinimumLength = 10)]
     public string Email { get; set; }
 
     [RegularExpression("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$", ErrorMessage = "Paasword must have these conditions: Has minimum 8 characters in length.At least one uppercase English letter. At least one lowercase English letter. At least one digit.")]
