@@ -17,7 +17,7 @@ public class Plant()
     [StringLength(255, MinimumLength = 2)]
     public string Family { get; set; }
 
-    [RegularExpression("^(?:indoor(?!.*indoor)|outdoor(?!.*standard))$", ErrorMessage = "Plant can only be 'indoor or outdoor'")]
+    [RegularExpression("^(?:indoor(?!.*indoor)|outdoor(?!.*outdoor))$", ErrorMessage = "Plant can only be 'indoor or outdoor'")]
     [Required]
     public string IndoorOutdoor { get; set; }
 }
