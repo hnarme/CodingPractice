@@ -21,6 +21,18 @@ public class PlantController : Controller
         return View(Database.Instance.GetAllPlant());
     }
 
+    public IActionResult IndoorOnly()
+    {
+        Database.Instance.SetConnectionString(_configuration.GetValue<string>("ConnectionString"));
+        return View(Database.Instance.IndoorOnlyPlant());
+    }
+
+    public IActionResult OutdoorOnly()
+    {
+        Database.Instance.SetConnectionString(_configuration.GetValue<string>("ConnectionString"));
+        return View(Database.Instance.outdoorOnlyPlant());
+    }
+
     public ActionResult Create(Plant plant)
     {
         Database.Instance.SetConnectionString(_configuration.GetValue<string>("ConnectionString"));

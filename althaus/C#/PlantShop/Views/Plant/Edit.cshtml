@@ -22,6 +22,11 @@
                 <input asp-for="@Model.Family" class="form-control" />
                 <span asp-validation-for="@Model.Family" class="text-danger"></span>
             </div>
+            <div class="form-group">
+                <label asp-for="@Model.IndoorOutdoor" class="control-label">Indoor or Outdoor</label>
+                <input asp-for="@Model.IndoorOutdoor" class="form-control" />
+                <span asp-validation-for="@Model.IndoorOutdoor" class="text-danger"></span>
+            </div>
             <hr />
             <div>
                 <input asp-action="EditResult" type="submit" value="Save" class="btn btn-primary" />

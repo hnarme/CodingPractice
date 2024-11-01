@@ -20,23 +20,15 @@
             <div class="LoginForm">
                 <form asp-action="Index">
                     <!-- Email input -->
-                    <div class="form-group" novalidate>
+                    <div class="form-group">
                         <label asp-for="@Model.Email" class="control-label">Email:</label>
                         <input name="Email" asp-for="@Model.Email" class="form-control" required />
-                        <span class="text-danger"></span>
-                        <div class="invalid-feedback">
-                            Sorry, we can't find an account with this email. Please try again.
-                        </div>
                     </div>
                     <!-- Password input -->
                     <div class="form-group">
                         <label asp-for="@Model.Password" class="control-label">Password:</label>
                         <input type="password" name="Password" asp-for="@Model.Password" class="form-control"
                             required />
-                        <span class="text-danger"></span>
-                        <div class="invalid-feedback">
-                            Sorry, we can't find an account with this password. Please try again.
-                        </div>
                     </div>
                     <hr />
 

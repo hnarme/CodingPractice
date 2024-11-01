@@ -76,6 +76,7 @@ public class Database
             plant.Plant_Id = int.Parse(plantID);
             plant.Name = reader[1].ToString();
             plant.Family = reader[2].ToString();
+            plant.IndoorOutdoor = reader[3].ToString();
             plantList.Add(plant);
         }
         reader.Close();
@@ -88,17 +89,84 @@ public class Database
         //}
     }
 
+    public List<Plant> IndoorOnlyPlant()
+    {
+        try
+        {
+            MySqlConnection conn = GetOpenConnection();
+
+            string sql = "SELECT * FROM plant WHERE indooroutdoor = 'indoor';";
+            MySqlCommand command = new MySqlCommand(sql, conn);
+            MySqlDataReader reader = command.ExecuteReader();
+
+            List<Plant> plantList = new List<Plant>();
+            while (reader.Read())
+            {
+                Plant plant = new Plant();
+                string plantID = plant.Plant_Id.ToString();
+                plantID = reader[0].ToString();
+                plant.Plant_Id = int.Parse(plantID);
+                plant.Name = reader[1].ToString();
+                plant.Family = reader[2].ToString();
+                plant.IndoorOutdoor = reader[3].ToString();
+                plantList.Add(plant);
+            }
+            reader.Close();
+            conn.Close();
+            return plantList;
+
+        }
+        catch (Exception exception)
+        {
+            return ErrorListPlant(exception.Message);
+        }
+    }
+
+    public List<Plant> outdoorOnlyPlant()
+    {
+        try
+        {
+            MySqlConnection conn = GetOpenConnection();
+
+            string sql = "SELECT * FROM plant WHERE indooroutdoor = 'outdoor';";
+            MySqlCommand command = new MySqlCommand(sql, conn);
+            MySqlDataReader reader = command.ExecuteReader();
+
+            List<Plant> plantList = new List<Plant>();
+            while (reader.Read())
+            {
+                Plant plant = new Plant();
+                string plantID = plant.Plant_Id.ToString();
+                plantID = reader[0].ToString();
+                plant.Plant_Id = int.Parse(plantID);
+                plant.Name = reader[1].ToString();
+                plant.Family = reader[2].ToString();
+                plant.IndoorOutdoor = reader[3].ToString();
+                plantList.Add(plant);
+            }
+            reader.Close();
+            conn.Close();
+            return plantList;
+
+        }
+        catch (Exception exception)
+        {
+            return ErrorListPlant(exception.Message);
+        }
+    }
+
     public void AddPlant(Plant plant)
     {
         try
         {
             MySqlConnection conn = GetOpenConnection();
 
-            string sql = "INSERT INTO plant (name, family) VALUES (@name, @family);";
+            string sql = "INSERT INTO plant (name, family, indooroutdoor) VALUES (@name, @family, @indooroutdoor);";
             Console.WriteLine(sql);
             MySqlCommand command = new MySqlCommand(sql, conn);
             command.Parameters.AddWithValue("@name", plant.Name);
             command.Parameters.AddWithValue("@family", plant.Family);
+            command.Parameters.AddWithValue("@indooroutdoor", plant.IndoorOutdoor);
 
             command.ExecuteNonQuery();
 
@@ -116,11 +184,12 @@ public class Database
         {
             MySqlConnection conn = GetOpenConnection();
 
-            string sql = "UPDATE plant SET name = @name, family = @family WHERE plant_id = @plant_id;";
+            string sql = "UPDATE plant SET name = @name, family = @family, indooroutdoor = @indooroutdoor WHERE plant_id = @plant_id;";
             Console.WriteLine(sql);
             MySqlCommand command = new MySqlCommand(sql, conn);
             command.Parameters.AddWithValue("@name", plant.Name);
             command.Parameters.AddWithValue("@family", plant.Family);
+            command.Parameters.AddWithValue("@indooroutdoor", plant.IndoorOutdoor);
             command.Parameters.AddWithValue("@Plant_Id", plant.Plant_Id);
             command.ExecuteNonQuery();
 

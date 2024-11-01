@@ -23,16 +23,19 @@
                 <span asp-validation-for="@Model.Family" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="@Model.IndoorOutdoor" class="control-label">Indoor or Outdoor:</label>
+                <input name="IndoorOutdoor" asp-for="@Model.IndoorOutdoor" class="form-control" />
+                <span asp-validation-for="@Model.IndoorOutdoor" class="text-danger"></span>
+            </div>
+            <hr />
+            <div class="form-group">
                 <input type="submit" value="Add plant" class="btn btn-primary" />
                 <a asp-controller="plant" asp-action="Index" class="btn btn-primary">Cancel</a>
             </div>
         </form>
     </div>
 </div>
-<hr />
-<div>
 
-</div>
 
 @section Scripts {
     @{

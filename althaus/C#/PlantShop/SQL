@@ -68,10 +68,38 @@ WHERE plant_id = 14;
  */
 -- @block
 DROP Table plantshop.plant;
----
----
----
--- COMMANDS for plant shop database staff Table
+/*
+ separator
+ */
+-- @block
+ALTER TABLE plantshop.plant
+ADD indooroutdoor VARCHAR(8) NOT NULL;
+/*
+ separator
+ */
+-- @block
+UPDATE plantshop.plant
+SET indooroutdoor = 'indoor'
+WHERE plant_id BETWEEN 1 AND 4;
+/*
+ separator
+ */
+-- @block
+UPDATE plantshop.plant
+SET indooroutdoor = 'outdoor'
+WHERE plant_id BETWEEN 5 AND 8;
+/*
+ separator
+ */
+-- @block
+SELECT *
+FROM plantshop.plant
+WHERE indooroutdoor = 'indoor';
+/*---
+ ---
+ ---
+ -- COMMANDS for plant shop database staff Table
+ */
 -- @block
 CREATE TABLE plantshop.staff(
     staff_id INT PRIMARY KEY AUTO_INCREMENT,
