@@ -20,5 +20,8 @@ public class Plant()
     [RegularExpression("^(?:indoor(?!.*indoor)|outdoor(?!.*outdoor))$", ErrorMessage = "Plant can only be 'indoor or outdoor'")]
     [Required]
     public string IndoorOutdoor { get; set; }
-}
 
+
+
+    public string Plant_Image { get; set; }
+}

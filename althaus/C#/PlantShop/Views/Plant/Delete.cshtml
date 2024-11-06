@@ -18,6 +18,7 @@
             <p class="fexi_header"><span>Name: </span>@Model.Name</p>
             <p class="fexi_header_para"><span>Family: </span> @Model.Family </p>
             <p class="fexi_header_para"><span>Indoor or Outdoor: </span> @Model.IndoorOutdoor </p>
+            <p class="fexi_header_para"><span>Image: </span> @Model.Plant_Image</p>
         </div>
     </dl>
 </div>
@@ -52,3 +53,9 @@
         </form>
     </div>
 </div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -2,7 +2,8 @@
 CREATE TABLE plantshop.plant(
     plant_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
-    family VARCHAR(50) NOT NULL
+    family VARCHAR(50) NOT NULL,
+    indooroutdoor VARCHAR(8)
 );
 /*
  separator
@@ -19,57 +20,58 @@ ALTER TABLE plantshop.plant DROP COLUMN email;
  separator
  */
 -- @block
-INSERT INTO plantshop.plant (name, family)
+INSERT INTO plantshop.plant (name, family, indooroutdoor)
 VALUES (
         'Cardinal flower',
-        'Campanulaceae'
+        'Campanulaceae',
+        'indoor'
     ),
     (
         'Algerian Ivy',
-        'Araliaceae'
+        'Araliaceae',
+        'indoor'
     ),
     (
         'American Elderberry',
-        'Adoxaceae'
+        'Adoxaceae',
+        'indoor'
     ),
     (
         'Angelonia',
-        'Plantaginaceae'
+        'Plantaginaceae',
+        'indoor'
     ),
     (
         'Blackberry Lily',
-        'Iridaceae'
+        'Iridaceae',
+        'outdoor'
     ),
     (
         'Bellflowers',
-        'Campanulaceae'
+        'Campanulaceae',
+        'outdoor'
     ),
     (
         'Lace aloe',
-        'Asphodelaceae'
+        'Asphodelaceae',
+        'outdoor'
     ),
-    ('Lily', 'Liliaceae');
+    ('Lily', 'Liliaceae', 'outdoor');
 /*
  separator
  */
 -- @block
 SELECT *
 FROM plantshop.plant;
-/*
- separator
- */
+-- Add plant image column to the table plant
+-- @block
+ALTER TABLE plantshop.plant
+ADD plant_image VARCHAR(255);
+-- set image link to the row with id = 1
 -- @block
 UPDATE plantshop.plant
-SET name = 'choice',
-    family = 'garden'
-WHERE plant_id = 14;
-/*
- separator
- */
--- @block
----
----
----
+SET plant_image = 'https://www.brooksidenursery.co.uk/media/catalog/product/cache/1365fd90104fe9bc02276aadbee322bf/t/u/tumbnail_b47dbe08-5dd8-4832-94b4-e47b3cacf047.jpg'
+WHERE plant_id = 8;
 -- COMMANDS for plant shop database staff Table
 -- @block
 CREATE TABLE plantshop.staff(
@@ -150,90 +152,6 @@ VALUES (
         'rosyjoseph@greenplant.com',
         'password'
     );
-/*
- separator
- */
-/*
- -- @block
- INSERT INTO plantshop.staff (forename, surname, email, password)
- VALUES (
- 'Cliff',
- 'Boothman',
- '1997-5-31',
- 'cliffboothman@greenplant.com',
- 'password'
- ),
- (
- 'Constantin',
- 'Chevalier',
- '1996-12-20',
- 'constchevalier@greenplant.com',
- 'password'
- ),
- (
- 'Sascha',
- 'Ritter',
- '1995-9-5',
- 'sascharitter@greenplant.com',
- 'password'
- ),
- (
- 'Leonidas',
- 'Xanthopoulos',
- '1994-6-18',
- 'leonidasxantho@greenplant.com',
- 'password'
- ),
- (
- 'Javon',
- 'Davis',
- '1993-1-24',
- 'javondavis@greenplant.com',
- 'password'
- ),
- (
- 'Nevan',
- 'Higgins',
- '1992-12-12',
- 'nevanhiggins@greenplant.com',
- 'password'
- ),
- (
- 'Asami',
- 'Sugimoto',
- '1998-3-17',
- 'asamisugi@greenplant.com',
- 'password'
- ),
- (
- 'Sung-Hyun',
- 'Yoon',
- '1999-10-28',
- 'sunghyunyoon@greenplant.com',
- 'password'
- ),
- (
- 'Neusa',
- 'Costa',
- '2000-7-5',
- 'neusacosta@greenplant.com',
- 'password'
- ),
- (
- 'Kulap',
- 'Wattana',
- '2001-4-8',
- 'kulapwattana@greenplant.com',
- 'password'
- ),
- (
- 'Rosy',
- 'Joseph',
- '2002-8-27',
- 'rosyjoseph@greenplant.com',
- 'password'
- );
- */
 /*
  separator
  */

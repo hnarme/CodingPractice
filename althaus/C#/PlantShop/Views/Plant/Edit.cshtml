@@ -31,6 +31,12 @@
                 <input asp-for="@Model.IndoorOutdoor" class="form-control" />
                 <span asp-validation-for="@Model.IndoorOutdoor" class="text-danger"></span>
             </div>
+            <!-- image input -->
+            <div class="form-group">
+                <input name="PlantImage" asp-for="@Model.Plant_Image" class="custom-file-input" required />
+                <label asp-for="@Model.Plant_Image" class="custom-file-label">Choose image file...</label>
+                <span asp-validation-for="@Model.Plant_Image" class="text-danger"></span>
+            </div>
             <hr />
             <!-- Submit and cancel button -->
             <div>
