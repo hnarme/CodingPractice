@@ -26,6 +26,7 @@
                         <th>Family</th>
                         <th>Indoor or Outdoor</th>
                         <th>Plant Image</th>
+                        <th>Quantity</th>
                         <th style="width: 1px;"></th>
                     </tr>
                 </thead>
@@ -46,7 +47,10 @@
                                 @plants.IndoorOutdoor
                             </td>
                             <td>
-                                @plants.Plant_Image
+                                <img src="@plants.Plant_Image" alt="plantImagePreview" class="img-thumbnail">
+                            </td>
+                            <td>
+                            @plants.Quantity
                             </td>
                             <td>
                                 <div class="dropdown">

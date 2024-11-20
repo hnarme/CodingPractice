@@ -21,7 +21,9 @@ public class Plant()
     [Required]
     public string IndoorOutdoor { get; set; }
 
-
-
     public string Plant_Image { get; set; }
+
+    [RegularExpression(@"^[0-9]*$", ErrorMessage = "A quantity number is required. Use only whole numbers.")]
+    [Required]
+    public int Quantity { get; set; }
 }

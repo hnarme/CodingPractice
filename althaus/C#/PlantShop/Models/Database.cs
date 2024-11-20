@@ -42,6 +42,7 @@ public class Database
         plant.Name = message;
         plant.Family = message;
         plant.Plant_Image = message;
+        plant.Quantity = message;
         return new List<Plant>() { plant };
     }
 
@@ -79,6 +80,7 @@ public class Database
             plant.Family = reader[2].ToString();
             plant.IndoorOutdoor = reader[3].ToString();
             plant.Plant_Image = reader[4].ToString();
+            plant.Quantity = reader[5].ToString();
             plantList.Add(plant);
         }
         reader.Close();
@@ -104,14 +106,16 @@ public class Database
             List<Plant> plantList = new List<Plant>();
             while (reader.Read())
             {
-                Plant plant = new Plant();
-                string plantID = plant.Plant_Id.ToString();
-                plantID = reader[0].ToString();
-                plant.Plant_Id = int.Parse(plantID);
-                plant.Name = reader[1].ToString();
-                plant.Family = reader[2].ToString();
-                plant.IndoorOutdoor = reader[3].ToString();
-                plantList.Add(plant);
+            Plant plant = new Plant();
+            string plantID = plant.Plant_Id.ToString();
+            plantID = reader[0].ToString();
+            plant.Plant_Id = int.Parse(plantID);
+            plant.Name = reader[1].ToString();
+            plant.Family = reader[2].ToString();
+            plant.IndoorOutdoor = reader[3].ToString();
+            plant.Plant_Image = reader[4].ToString();
+            plant.Quantity = reader[5].ToString();
+            plantList.Add(plant);
             }
             reader.Close();
             conn.Close();
@@ -137,14 +141,16 @@ public class Database
             List<Plant> plantList = new List<Plant>();
             while (reader.Read())
             {
-                Plant plant = new Plant();
-                string plantID = plant.Plant_Id.ToString();
-                plantID = reader[0].ToString();
-                plant.Plant_Id = int.Parse(plantID);
-                plant.Name = reader[1].ToString();
-                plant.Family = reader[2].ToString();
-                plant.IndoorOutdoor = reader[3].ToString();
-                plantList.Add(plant);
+            Plant plant = new Plant();
+            string plantID = plant.Plant_Id.ToString();
+            plantID = reader[0].ToString();
+            plant.Plant_Id = int.Parse(plantID);
+            plant.Name = reader[1].ToString();
+            plant.Family = reader[2].ToString();
+            plant.IndoorOutdoor = reader[3].ToString();
+            plant.Plant_Image = reader[4].ToString();
+            plant.Quantity = reader[5].ToString();
+            plantList.Add(plant);
             }
             reader.Close();
             conn.Close();
@@ -163,13 +169,14 @@ public class Database
         {
             MySqlConnection conn = GetOpenConnection();
 
-            string sql = "INSERT INTO plant (name, family, indooroutdoor, plant_image) VALUES (@name, @family, @indooroutdoor, @plant_image);";
+            string sql = "INSERT INTO plant (name, family, indooroutdoor, plant_image, quantity) VALUES (@name, @family, @indooroutdoor, @plant_image, @quantity);";
             Console.WriteLine(sql);
             MySqlCommand command = new MySqlCommand(sql, conn);
             command.Parameters.AddWithValue("@name", plant.Name);
             command.Parameters.AddWithValue("@family", plant.Family);
             command.Parameters.AddWithValue("@indooroutdoor", plant.IndoorOutdoor);
             command.Parameters.AddWithValue("@plant_image", plant.Plant_Image);
+            command.Parameters.AddWithValue("@quantity", plant.Quantity);
 
             command.ExecuteNonQuery();
 
@@ -187,13 +194,14 @@ public class Database
         {
             MySqlConnection conn = GetOpenConnection();
 
-            string sql = "UPDATE plant SET name = @name, family = @family, indooroutdoor = @indooroutdoor plant_image = @plant_image WHERE plant_id = @plant_id;";
+            string sql = "UPDATE plant SET name = @name, family = @family, indooroutdoor = @indooroutdoor, plant_image = @plant_image, quantity = @quantity  WHERE plant_id = @plant_id;";
             Console.WriteLine(sql);
             MySqlCommand command = new MySqlCommand(sql, conn);
             command.Parameters.AddWithValue("@name", plant.Name);
             command.Parameters.AddWithValue("@family", plant.Family);
             command.Parameters.AddWithValue("@indooroutdoor", plant.IndoorOutdoor);
             command.Parameters.AddWithValue("@plant_image", plant.Plant_Image);
+            command.Parameters.AddWithValue("@quantity", plant.Quantity);
             command.Parameters.AddWithValue("@plant_id", plant.Plant_Id);
             command.ExecuteNonQuery();
 

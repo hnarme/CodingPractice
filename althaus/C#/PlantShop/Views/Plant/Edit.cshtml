@@ -31,6 +31,11 @@
                 <input asp-for="@Model.IndoorOutdoor" class="form-control" />
                 <span asp-validation-for="@Model.IndoorOutdoor" class="text-danger"></span>
             </div>
+            <!-- Quantity input -->
+            <div data-mdb-input-init class="form-outline" style="width: 22rem;">
+                <label asp-for="@Model.IndoorOutdoor" class="form-label">Quantity:</label>
+                <input name="IndoorOutdoor" asp-for="@Model.IndoorOutdoor" class="form-control" value="0" type="number" />
+            </div>
             <!-- image input -->
             <div class="form-group">
                 <input name="PlantImage" asp-for="@Model.Plant_Image" class="custom-file-input" required />

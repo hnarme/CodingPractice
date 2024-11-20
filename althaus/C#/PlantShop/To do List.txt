@@ -3,4 +3,5 @@ rearrange the plants table to have plant images first
 Add staff images to staff table
 Add staff dob to table
 Add security to login
+Add comments
 Use data context instead for database
