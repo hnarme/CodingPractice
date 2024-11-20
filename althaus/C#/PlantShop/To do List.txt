@@ -1,0 +1,5 @@
+Add quantity to plants table
+rearrange the plants table to have plant images first
+Add staff images to staff table
+Add security to login
+Use data context instead for database
