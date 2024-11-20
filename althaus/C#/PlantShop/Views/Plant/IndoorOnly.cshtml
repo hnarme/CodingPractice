@@ -21,10 +21,10 @@
                 <thead>
                     <tr>
                         <th>Plant Id</th>
+                        <th>Plant Image</th>
                         <th>Name</th>
                         <th>Family</th>
                         <th>Indoor or Outdoor</th>
-                        <th>Plant Image</th>
                         <th>Quantity</th>
                         <th style="width: 1px;"></th>
                     </tr>
@@ -37,6 +37,9 @@
                                 @plants.Plant_Id
                             </td>
                             <td>
+                                <img src="@plants.Plant_Image" alt="plantImagePreview" class="img-thumbnail">
+                            </td>
+                            <td>
                                 @plants.Name
                             </td>
                             <td>
@@ -46,10 +49,7 @@
                                 @plants.IndoorOutdoor
                             </td>
                             <td>
-                                <img src="@plants.Plant_Image" alt="plantImagePreview" class="img-thumbnail">
-                            </td>
-                            <td>
-                            @plants.Quantity
+                                @plants.Quantity
                             </td>
                             <td>
                                 <div class="dropdown">

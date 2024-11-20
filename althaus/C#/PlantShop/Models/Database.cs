@@ -42,7 +42,8 @@ public class Database
         plant.Name = message;
         plant.Family = message;
         plant.Plant_Image = message;
-        plant.Quantity = message;
+        string plantQuantityString = plant.Quantity.ToString();
+        plantQuantityString = message;
         return new List<Plant>() { plant };
     }
 
@@ -80,7 +81,9 @@ public class Database
             plant.Family = reader[2].ToString();
             plant.IndoorOutdoor = reader[3].ToString();
             plant.Plant_Image = reader[4].ToString();
-            plant.Quantity = reader[5].ToString();
+            string plantQuantity = plant.Quantity.ToString();
+            plantQuantity = reader[5].ToString();
+            plant.Quantity = int.Parse(plantQuantity);
             plantList.Add(plant);
         }
         reader.Close();
@@ -106,16 +109,18 @@ public class Database
             List<Plant> plantList = new List<Plant>();
             while (reader.Read())
             {
-            Plant plant = new Plant();
-            string plantID = plant.Plant_Id.ToString();
-            plantID = reader[0].ToString();
-            plant.Plant_Id = int.Parse(plantID);
-            plant.Name = reader[1].ToString();
-            plant.Family = reader[2].ToString();
-            plant.IndoorOutdoor = reader[3].ToString();
-            plant.Plant_Image = reader[4].ToString();
-            plant.Quantity = reader[5].ToString();
-            plantList.Add(plant);
+                Plant plant = new Plant();
+                string plantID = plant.Plant_Id.ToString();
+                plantID = reader[0].ToString();
+                plant.Plant_Id = int.Parse(plantID);
+                plant.Name = reader[1].ToString();
+                plant.Family = reader[2].ToString();
+                plant.IndoorOutdoor = reader[3].ToString();
+                plant.Plant_Image = reader[4].ToString();
+                string plantQuantity = plant.Quantity.ToString();
+                plantQuantity = reader[5].ToString();
+                plant.Quantity = int.Parse(plantQuantity);
+                plantList.Add(plant);
             }
             reader.Close();
             conn.Close();
@@ -141,16 +146,18 @@ public class Database
             List<Plant> plantList = new List<Plant>();
             while (reader.Read())
             {
-            Plant plant = new Plant();
-            string plantID = plant.Plant_Id.ToString();
-            plantID = reader[0].ToString();
-            plant.Plant_Id = int.Parse(plantID);
-            plant.Name = reader[1].ToString();
-            plant.Family = reader[2].ToString();
-            plant.IndoorOutdoor = reader[3].ToString();
-            plant.Plant_Image = reader[4].ToString();
-            plant.Quantity = reader[5].ToString();
-            plantList.Add(plant);
+                Plant plant = new Plant();
+                string plantID = plant.Plant_Id.ToString();
+                plantID = reader[0].ToString();
+                plant.Plant_Id = int.Parse(plantID);
+                plant.Name = reader[1].ToString();
+                plant.Family = reader[2].ToString();
+                plant.IndoorOutdoor = reader[3].ToString();
+                plant.Plant_Image = reader[4].ToString();
+                string plantQuantity = plant.Quantity.ToString();
+                plantQuantity = reader[5].ToString();
+                plant.Quantity = int.Parse(plantQuantity);
+                plantList.Add(plant);
             }
             reader.Close();
             conn.Close();
@@ -179,6 +186,7 @@ public class Database
             command.Parameters.AddWithValue("@quantity", plant.Quantity);
 
             command.ExecuteNonQuery();
+            Debug.WriteLine(plant.Name + plant.Family + plant.IndoorOutdoor + plant.Plant_Image + plant.Quantity);
 
             conn.Close();
         }

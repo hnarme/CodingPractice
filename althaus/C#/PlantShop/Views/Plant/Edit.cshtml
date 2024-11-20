@@ -33,14 +33,13 @@
             </div>
             <!-- Quantity input -->
             <div data-mdb-input-init class="form-outline" style="width: 22rem;">
-                <label asp-for="@Model.IndoorOutdoor" class="form-label">Quantity:</label>
-                <input name="IndoorOutdoor" asp-for="@Model.IndoorOutdoor" class="form-control" value="0" type="number" />
+                <label asp-for="@Model.Quantity" class="form-label">Quantity:</label>
+                <input name="Quantity" asp-for="@Model.Quantity" class="form-control" type="number" required />
             </div>
             <!-- image input -->
             <div class="form-group">
-                <input name="PlantImage" asp-for="@Model.Plant_Image" class="custom-file-input" required />
-                <label asp-for="@Model.Plant_Image" class="custom-file-label">Choose image file...</label>
-                <span asp-validation-for="@Model.Plant_Image" class="text-danger"></span>
+                <label asp-for="@Model.Plant_Image" class="control-label">Plant Image:</label>
+                <input name="Plant_Image" asp-for="@Model.Plant_Image" class="form-control" />
             </div>
             <hr />
             <!-- Submit and cancel button -->

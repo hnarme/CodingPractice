@@ -36,12 +36,17 @@ public class PlantController : Controller
     public ActionResult Create(Plant plant)
     {
         Database.Instance.SetConnectionString(_configuration.GetValue<string>("ConnectionString"));
+
         return View(plant);
     }
 
     public ActionResult CreateResult(Plant plant)
     {
         Database.Instance.AddPlant(plant);
+        if (plant.Plant_Image == null)
+        {
+            plant.Plant_Image = DisplayNullImage();
+        }
         return View(plant);
     }
 
@@ -62,6 +67,10 @@ public class PlantController : Controller
     public ViewResult EditResult(Plant plant)
     {
         Database.Instance.EditPlant(plant);
+        if (plant.Plant_Image == null)
+        {
+            plant.Plant_Image = DisplayNullImage();
+        }
         return View(plant);
     }
 
@@ -77,6 +86,12 @@ public class PlantController : Controller
     {
         Database.Instance.DeletePlant(plant);
         return View(plant);
+    }
+
+    public String DisplayNullImage()
+    {
+        string NullImage = "Images/NullFlowerImage.png";
+        return NullImage;
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

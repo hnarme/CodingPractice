@@ -1,5 +1,4 @@
-Add quantity to plants table
-rearrange the plants table to have plant images first
+Add option to upload image
 Add staff images to staff table
 Add staff dob to table
 Add security to login
