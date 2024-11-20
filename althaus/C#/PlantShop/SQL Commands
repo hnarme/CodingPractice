@@ -2,7 +2,10 @@
 CREATE TABLE plantshop.plant(
     plant_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
-    family VARCHAR(50) NOT NULL
+    family VARCHAR(50) NOT NULL,
+    indooroutdoor VARCHAR(8) NOT NULL,
+    plant_image VARCHAR(255),
+    quantity INT
 );
 /*
  separator
@@ -19,54 +22,68 @@ ALTER TABLE plantshop.plant DROP COLUMN email;
  separator
  */
 -- @block
-INSERT INTO plantshop.plant (name, family, indooroutdoor)
+INSERT INTO plantshop.plant (
+        name,
+        family,
+        indooroutdoor,
+        plant_image,
+        quantity
+    )
 VALUES (
         'Cardinal flower',
         'Campanulaceae',
         'indoor',
-        'https://www.thespruce.com/thmb/GKQE4kcHuKpK1NV5ONBdm9vTZjo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/growing-cardinal-flowers-5093922-02-8a7175a31ace4215906de2a91a3f6dfe.jpg'
+        'https://www.thespruce.com/thmb/GKQE4kcHuKpK1NV5ONBdm9vTZjo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/growing-cardinal-flowers-5093922-02-8a7175a31ace4215906de2a91a3f6dfe.jpg',
+        40
     ),
     (
         'Algerian Ivy',
         'Araliaceae',
         'indoor',
-        'https://mygardenlife.com/wp-content/uploads/2022/12/6362_37-1.jpg'
+        'https://mygardenlife.com/wp-content/uploads/2022/12/6362_37-1.jpg',
+        62
     ),
     (
         'American Elderberry',
         'Adoxaceae',
         'indoor',
-        'https://www.fs.usda.gov/wildflowers/plant-of-the-week/images/americanblackelderberry/black_elderberry2_full.JPG'
+        'https://www.fs.usda.gov/wildflowers/plant-of-the-week/images/americanblackelderberry/black_elderberry2_full.JPG',
+        85
     ),
     (
         'Angelonia',
         'Plantaginaceae',
         'indoor',
-        'https://www.gardendesign.com/pictures/images/900x705Max/site_3/serena-purple-angelonia-angelonia-angustifolia-shutterstock-com_15441.jpg'
+        'https://www.gardendesign.com/pictures/images/900x705Max/site_3/serena-purple-angelonia-angelonia-angustifolia-shutterstock-com_15441.jpg',
+        29
     ),
     (
         'Blackberry Lily',
         'Iridaceae',
         'outdoor',
-        'https://www.gardenia.net/wp-content/uploads/2023/04/9bvWGae4hlK0zOkemWmrSxH7CGmHgvaYpE8RlK3p-747x533.webp'
+        'https://www.gardenia.net/wp-content/uploads/2023/04/9bvWGae4hlK0zOkemWmrSxH7CGmHgvaYpE8RlK3p-747x533.webp',
+        75
     ),
     (
         'Bellflowers',
         'Campanulaceae',
         'outdoor',
-        'https://cdn.pixabay.com/photo/2020/05/27/13/00/bellflowers-5227156_960_720.jpg'
+        'https://cdn.pixabay.com/photo/2020/05/27/13/00/bellflowers-5227156_960_720.jpg',
+        33
     ),
     (
         'Lace aloe',
         'Asphodelaceae',
         'outdoor',
-        'https://www.thespruce.com/thmb/PzDZv1TdJoATFsvnoGEwE7N9neQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/SPR-lace-aloe-7377345-03-2073d608804d4309ba516f8131f316f6.jpg'
+        'https://www.thespruce.com/thmb/PzDZv1TdJoATFsvnoGEwE7N9neQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/SPR-lace-aloe-7377345-03-2073d608804d4309ba516f8131f316f6.jpg',
+        92
     ),
     (
         'Lily',
         'Liliaceae',
         'outdoor',
-        'https://www.brooksidenursery.co.uk/media/catalog/product/cache/1365fd90104fe9bc02276aadbee322bf/t/u/tumbnail_b47dbe08-5dd8-4832-94b4-e47b3cacf047.jpg'
+        'https://www.brooksidenursery.co.uk/media/catalog/product/cache/1365fd90104fe9bc02276aadbee322bf/t/u/tumbnail_b47dbe08-5dd8-4832-94b4-e47b3cacf047.jpg',
+        52
     );
 /*
  separator
@@ -79,6 +96,12 @@ FROM plantshop.plant;
  */
 -- @block
 DROP Table plantshop.plant;
+/*
+ separator
+ */
+-- @block
+ALTER TABLE plantshop.plant
+ADD quantity INT;
 /*
  separator
  */
